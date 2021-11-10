@@ -1,0 +1,375 @@
+@media all and (max-width: 769px) {
+  /* 공통 */
+  section {
+    padding: 100px 0;
+  }
+
+  #in_header,
+  .container {
+    width: 95%;
+    padding: 0;
+  }
+
+  .titleBox {
+    margin-bottom: 120px;
+  }
+
+  .section_mark {
+    margin-bottom: 60px;
+  }
+
+  /* header */
+  #in_header {
+    justify-content: center;
+  }
+
+  #logo {
+    margin-left: 0;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #m_menu_wrap {
+    display: block;
+  }
+
+  #side_btn {
+    width: 25px;
+    position: fixed;
+    right: 2.5%;
+    top: 27.5px;
+    z-index: 100;
+  }
+
+  #m_menu {
+    width: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    font: 15px;
+    color: #c2c2c2;
+    z-index: 80;
+    padding: 75px 0 0 0;
+    overflow: hidden;
+  }
+
+  .m_menu_item {
+    transition-duration: 0.5s;
+  }
+
+  .m_menu_item:hover {
+    color: #1e496c;
+  }
+
+  .m_menu_item:hover a {
+    background-color: #a0c5e450;
+  }
+
+  .m_menu_item a {
+    display: block;
+    margin: 0;
+    line-height: 90px;
+    text-align: center;
+  }
+  /* section main */
+  #main_img {
+    width: 60.6%;
+  }
+
+  .maintxt {
+    margin: 0 7px;
+  }
+  /* section02 About */
+
+  #about .sub_title {
+    max-width: 484px;
+  }
+
+  .About_desc {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  #desc02 {
+    flex-direction: column-reverse;
+  }
+
+  .about_txt {
+    width: 100%;
+  }
+
+  .about_img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .about_img,
+  #desc01 > .about_img,
+  #desc03 > .about_img {
+    margin: 0 0 80px 0;
+  }
+
+  /* section03 mackeolli */
+
+  #mackeolli .titleBox {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  #mackeolli .section_mark {
+    margin: 0 0 60px 0;
+  }
+
+  #mackeolli .sub_title {
+    max-width: 415px;
+    margin-left: 80px;
+    margin-bottom: 0;
+  }
+
+  #naru_desc {
+    display: none;
+  }
+
+  #slide01 {
+    height: 680px;
+  }
+
+  .in_slide {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide01_img {
+    width: 180px;
+    flex-shrink: 1;
+  }
+
+  .slide_desc {
+    max-width: 640px;
+    flex-shrink: 1;
+    text-align: center;
+  }
+
+  .slide_desc > h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .naru-name {
+    font-size: 36px;
+  }
+
+  .slide_desc > p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #cfcfcf;
+    margin-bottom: 50px;
+  }
+
+  table {
+    display: none;
+  }
+
+  #naru_slide01 {
+    background: linear-gradient(
+      180deg,
+      #1c3666 60%,
+      #f9fbfe 60%,
+      #f9fbfe 80%,
+      #1c3666 80%
+    );
+  }
+
+  #naru_slide02 {
+    background: linear-gradient(
+      180deg,
+      #215a9d 60%,
+      #f9fbfe 60%,
+      #f9fbfe 80%,
+      #215a9d 80%
+    );
+  }
+
+  #naru_slide03 {
+    background: linear-gradient(
+      180deg,
+      #067447 60%,
+      #fff7b6 60%,
+      #fff7b6 80%,
+      #067447 80%
+    );
+  }
+
+  #naru_slide03 .slide_desc {
+    margin-top: 30px;
+  }
+
+  #naru_slide03 .slide_desc > p {
+    margin-bottom: 20px;
+  }
+
+  #slide01_img03 {
+    width: 100%;
+    max-width: 340px;
+    transform: translateY(15px);
+  }
+
+  #img03_pc {
+    display: none;
+  }
+
+  #img03_mo {
+    display: block;
+  }
+
+  #slide01_dot > p {
+    transform: scale(0.8);
+    padding: 0 5px;
+  }
+
+  /* section04 brewery */
+  #brewery .titleBox {
+    margin-left: 55px;
+  }
+
+  #brewery_desc {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  #brewery_img {
+    width: 72.697%;
+    flex-shrink: 1;
+    margin-bottom: 80px;
+  }
+
+  #brewery_txt_wrap {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .brewery_txt > h3 {
+    margin-bottom: 16px;
+  }
+
+  #slide02 {
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .slide02_img {
+    width: 100%;
+  }
+
+  .slide02_img img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+
+  #slide02_dot {
+    margin: 6px 0 0 0;
+  }
+
+  #slide02_dot > p {
+    display: inline-block;
+    width: 10px;
+    padding: 0;
+    margin: 0 8px;
+  }
+
+  #slide02_dot > p:last-child {
+    width: 6px;
+  }
+
+  /* section04 news */
+  #news .titleBox {
+    margin-right: 55px;
+  }
+
+  #news_item-wrap {
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  #news_item {
+    width: 100%;
+  }
+
+  .news {
+    margin-right: 0;
+  }
+
+  .news:not(.mo) {
+    display: none;
+  }
+
+  .news:first-child {
+    width: 100%;
+    /* max-width: 519px; */
+  }
+
+  .news:nth-child(2n + 1) {
+    margin-top: 0;
+  }
+
+  .news_desc > p {
+    color: #cac9c9;
+  }
+
+  /* section05 contact */
+
+  #contact .titleBox {
+    margin-left: 55px;
+  }
+
+  #contact_logo {
+    display: none;
+  }
+
+  form {
+    margin-left: 0;
+  }
+
+  /* footer */
+  footer {
+    font-size: 13px;
+    line-height: 2.3;
+    padding: 72px 40px;
+    text-align: center;
+  }
+
+  footer > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #copyright {
+    margin-bottom: 33px;
+  }
+
+  #copyright br {
+    display: block;
+  }
+
+  #copyright span {
+    display: none;
+  }
+
+  #sns > li {
+    width: 45px;
+  }
+} ;

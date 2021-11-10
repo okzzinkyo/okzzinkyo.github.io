@@ -1,0 +1,139 @@
+@media all and (max-width: 320px) {
+  /* 공통 */
+  .titleBox {
+    margin-bottom: 70px;
+  }
+
+  .section_mark {
+    margin-bottom: 30px;
+  }
+
+  .section_mark > h2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #22486b;
+    margin-right: 30px;
+  }
+
+  .bar {
+    width: 100px;
+    height: 1px;
+    background-color: #22486b;
+  }
+
+  /* header */
+  header {
+    height: 55px;
+  }
+
+  #logo {
+    height: 55px;
+  }
+
+  #logo > a {
+    line-height: 55px;
+  }
+
+  #side_btn {
+    width: 20px;
+    top: 19.5px;
+  }
+
+  #m_menu {
+    padding: 55px 0 0 0;
+  }
+
+  .m_menu_item a {
+    line-height: 60px;
+  }
+
+  /* section02 About */
+  .About_desc {
+    margin-bottom: 100px;
+  }
+
+  .about_txt > h3 {
+    font-size: 24px;
+  }
+
+  .about_txt > p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .about_img,
+  #desc01 > .about_img,
+  #desc03 > .about_img {
+    margin: 0 0 55px 0;
+  }
+
+  .slide_desc > h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .naru-name {
+    font-size: 30px;
+  }
+
+  .slide_desc br {
+    display: none;
+  }
+
+  /* section03 mackeolli */
+
+  /* section04 brewery */
+  .brewery_txt {
+    margin-bottom: 50px;
+  }
+
+  .brewery_txt > h3 {
+    font-size: 24px;
+  }
+
+  .brewery_txt > p {
+    font-size: 16px;
+  }
+
+  .slide02_img {
+    height: 175px;
+  }
+
+  /* section04 news */
+
+  .news_desc.main {
+    padding: 50px 30px;
+  }
+
+  .news_desc > h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .news_desc > p {
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .news_desc > p:last-of-type {
+    margin-bottom: 30px;
+  }
+
+  .more_btn {
+    font-size: 14px;
+  }
+
+  /* section05 contact */
+
+  form {
+    align-items: flex-end;
+  }
+
+  #send_btn {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+} ;
