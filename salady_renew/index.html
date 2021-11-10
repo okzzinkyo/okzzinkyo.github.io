@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salady</title>
+    <!-- google font // Ubuntu, NotoSans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/pc.css" />
+    <link rel="stylesheet" href="css/note.css" />
+    <link rel="stylesheet" href="css/mo.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <!-- jquery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+    <script src="js/sigugun.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <div class="container">
+          <h1 id="logo"><a href="">Salady</a></h1>
+          <ul id="menu" class="pc">
+            <li class="menu_item"><a href="">브랜드</a></li>
+            <li class="menu_item"><a href="">메뉴</a></li>
+            <li class="menu_item"><a href="">영양정보</a></li>
+            <li class="menu_item"><a href="">매장</a></li>
+            <li class="menu_item"><a href="">셀럽오더</a></li>
+            <li class="btn menu_item" id="franchisee">
+              <a href="">가맹점 문의</a>
+            </li>
+          </ul>
+          <div id="side_bar" class="mo">
+            <img src="images/header/hambuger.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <div id="mo_wrap">
+        <div id="shadow" class="mo"></div>
+        <ul id="menu_mo" class="mo">
+          <li class="menu_item"><a href="">브랜드</a></li>
+          <li class="menu_item"><a href="">메뉴</a></li>
+          <li class="menu_item"><a href="">영양정보</a></li>
+          <li class="menu_item"><a href="">매장</a></li>
+          <li class="menu_item"><a href="">셀럽오더</a></li>
+          <li class="btn menu_item" id="franchisee">
+            <a href="">가맹점 문의</a>
+          </li>
+        </ul>
+      </div>
+      <!-- header End -->
+      <!-- main -->
+      <main>
+        <!-- section01 -->
+        <section id="section01">
+          <div class="container">
+            <div id="section01_title">
+              <h2 class="en">
+                Eat Better,<br />
+                <span>Be Better</span>
+              </h2>
+            </div>
+            <div id="section01_img">
+              <img src="images/header/seasonal_bowl_img01.png" alt="" />
+              <img src="images/header/seasonal_sand_img03.png" alt="" />
+              <img src="images/header/seasonal_wrap_img01.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <!-- section01 End -->
+        <!-- section02 -->
+        <section id="section02">
+          <div class="container">
+            <h2 class="title en">Salady Menus</h2>
+            <div id="foodMenu">
+              <div class="foodMenu_item selected" data-name="new">
+                <div class="foodMenu_icon">
+                  <img src="images/main/menu_icon/season_wh.png" alt="" />
+                  <img src="images/main/menu_icon/season_gr.png" alt="" />
+                </div>
+                <h3 class="en">NEW SEASON</h3>
+              </div>
+              <div class="foodMenu_item" data-name="bowl">
+                <div class="foodMenu_icon">
+                  <img src="images/main/menu_icon/wrapBowl_wh.png" alt="" />
+                  <img src="images/main/menu_icon/wrapBowl_gr.png" alt="" />
+                </div>
+                <h3 class="en">WARM BOWL</h3>
+              </div>
+              <div class="foodMenu_item" data-name="salad">
+                <div class="foodMenu_icon">
+                  <img src="images/main/menu_icon/salady_wh.png" alt="" />
+                  <img src="images/main/menu_icon/salady_gr.png" alt="" />
+                </div>
+                <h3 class="en">SALADY</h3>
+              </div>
+              <div class="foodMenu_item" data-name="sand">
+                <div class="foodMenu_icon">
+                  <img src="images/main/menu_icon/sand_wh.png" alt="" />
+                  <img src="images/main/menu_icon/sand_gr.png" alt="" />
+                </div>
+                <h3 class="en">SAND</h3>
+              </div>
+              <div class="foodMenu_item" data-name="wrap">
+                <div class="foodMenu_icon">
+                  <img src="images/main/menu_icon/Wrap_wh.png" alt="" />
+                  <img src="images/main/menu_icon/Wrap_gr.png" alt="" />
+                </div>
+                <h3 class="en">WRAP</h3>
+              </div>
+              <div class="foodMenu_item" data-name="warmWrap">
+                <div class="foodMenu_icon">
+                  <img src="images/main/menu_icon/wramWrap_wh.png" alt="" />
+                  <img src="images/main/menu_icon/wramWrap_gr.png" alt="" />
+                </div>
+                <h3 class="en">WARM WRAP</h3>
+              </div>
+            </div>
+            <!-- new season item -->
+            <div class="fooditem" id="seasonal_item" data-name="new">
+              <div id="seasonal_item_txt">
+                <p id="season_title">명란마요 쉬림프 포케볼</p>
+                <p id="season" class="en">2021 SUMMER</p>
+                <p class="en">Pollack Roe Mayo Shrimp Poke Bowl</p>
+              </div>
+              <div id="seasonal_item_img">
+                <img src="images/main/menu_item/seasonal_top.png" alt="" />
+              </div>
+              <div id="season_bg"></div>
+            </div>
+            <!-- salad item -->
+            <div
+              class="salady_item fooditem hidden"
+              id="salad"
+              data-name="salad"
+            >
+              <div class="item bestmenu">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_salady_best_img02.png"
+                    alt=""
+                  />
+                  <strong class="best en">Best</strong>
+                </div>
+                <p class="item_title">탄단지 7.6</p>
+                <p class="item_title_en">Tandanji</p>
+                <p class="item_desc">치킨 + 스윗포테이토 + 견과류 + 크랜베리</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_salady_img04.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">리코타치즈 8.1</p>
+                <p class="item_title_en">Ricotta Cheese</p>
+                <p class="item_desc">리코타치즈 + 견과류 + 크랜베리 + 통밀빵</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_salady_img05.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">연어 8.4</p>
+                <p class="item_title_en">Salmon</p>
+                <p class="item_desc">연어 + 스윗포테이토 + 양파</p>
+              </div>
+            </div>
+            <!-- bowl item -->
+            <div
+              class="salady_item fooditem hidden"
+              id="salad"
+              data-name="bowl"
+            >
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_bowl_img02.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">우삼겹 7.6</p>
+                <p class="item_title_en">Beef Loin</p>
+                <p class="item_desc">우삼겹 + 양파 + 견과류</p>
+              </div>
+              <div class="item bestmenu">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_bowl_best_img01.png"
+                    alt=""
+                  />
+                  <strong class="best en">Best</strong>
+                </div>
+                <p class="item_title">칠리베이컨 6.9</p>
+                <p class="item_title_en">Chilli Bacon</p>
+                <p class="item_desc">베이컨 + 에그 + 옥수수 + 양파플레이크</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_bowl_vegan_img04.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">단호박두부 7.1</p>
+                <p class="item_title_en">Sweet Pumpkin Tofu</p>
+                <p class="item_desc">단호박 + 두부 + 칙피 + 옥수수</p>
+              </div>
+            </div>
+            <!-- sand item -->
+            <div
+              class="salady_item fooditem hidden"
+              id="salad"
+              data-name="sand"
+            >
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_sand_img01.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">치킨토마토 5.7</p>
+                <p class="item_title_en">Chiken Tomato</p>
+                <p class="item_desc">치킨 + 토마토 + 크림치즈</p>
+              </div>
+              <div class="item bestmenu">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_sand_best_img02.png"
+                    alt=""
+                  />
+                  <strong class="best en">Best</strong>
+                </div>
+                <p class="item_title">에그베이컨 5.7</p>
+                <p class="item_title_en">Egg Bacon</p>
+                <p class="item_desc">에그 + 베이컨 + 크림치즈</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_sand_img03.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">샬롯연어 6.4</p>
+                <p class="item_title_en">Shallot Salmon</p>
+                <p class="item_desc">연어 + 양파 + 크림치즈</p>
+              </div>
+            </div>
+            <!-- wrap item -->
+            <div
+              class="salady_item fooditem hidden"
+              id="salad"
+              data-name="wrap"
+            >
+              <div class="item bestmenu">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_wrap_best_img01.png"
+                    alt=""
+                  />
+                  <strong class="best en">Best</strong>
+                </div>
+                <p class="item_title">멕시칸 5.9</p>
+                <p class="item_title_en">Mexican</p>
+                <p class="item_desc">그라운드비프 + 또띠아칩 + 사워크림</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_wrap_img02.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">시저치킨 5.9</p>
+                <p class="item_title_en">Caesar Chiken</p>
+                <p class="item_desc">치킨 + 크랜베리</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_wrap_img03.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">샬롯연어 7.2</p>
+                <p class="item_title_en">Shallot Salmon</p>
+                <p class="item_desc">연어 + 양파 + 토마토</p>
+              </div>
+            </div>
+            <!-- warm wrap item -->
+            <div
+              class="salady_item fooditem hidden"
+              id="salad"
+              data-name="warmWrap"
+            >
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_warm_img01.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">칠리베이컨 6.9</p>
+                <p class="item_title_en">Chilli Bacon</p>
+                <p class="item_desc">베이컨 + 에그 + 옥수수 + 양파플레이크</p>
+              </div>
+              <div class="item bestmenu">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_warm_best_img02.png"
+                    alt=""
+                  />
+                  <strong class="best en">Best</strong>
+                </div>
+                <p class="item_title">우삼겹 7.6</p>
+                <p class="item_title_en">Beef Loin</p>
+                <p class="item_desc">우삼겹 + 양파 + 견과류</p>
+              </div>
+              <div class="item">
+                <div class="item_img">
+                  <img
+                    src="images/main/menu_item/seasonal_warm_img03.png"
+                    alt=""
+                  />
+                </div>
+                <p class="item_title">치킨소시지 6.5</p>
+                <p class="item_title_en">Chiken Sausage</p>
+                <p class="item_desc">치킨소시지 + 에그 + 옥수수</p>
+              </div>
+            </div>
+            <!-- 바로가기 btn -->
+            <div class="btn" id="more"><a href="">다른 메뉴 보러가기</a></div>
+          </div>
+        </section>
+        <!-- section02 End -->
+        <!-- section03 -->
+        <section id="section03">
+          <div class="container">
+            <h2 class="title en">Make Your Own Salady</h2>
+            <p class="sub_title">
+              기호에 맞게 커스터마이징(customizing)해서 즐기세요!
+            </p>
+            <div id="step_wrap">
+              <div class="step" id="step01">
+                <div class="circle"></div>
+                <h3 class="en">step.1</h3>
+                <p>
+                  기본 베이스를 선택하세요.
+                  <br />
+                  "채소볼" or "곡물볼"
+                </p>
+              </div>
+              <div class="arrow pc">→</div>
+              <div class="arrow mo">↓</div>
+              <div class="step" id="step02">
+                <div class="circle"></div>
+                <h3 class="en">step.2</h3>
+                <p>메인 토핑을 선택해주세요.</p>
+              </div>
+              <div class="arrow pc">→</div>
+              <div class="arrow mo">↓</div>
+              <div class="step" id="step03">
+                <div class="circle"></div>
+                <h3 class="en">step.3</h3>
+                <p>서브 토핑을 선택해주세요.</p>
+              </div>
+              <div class="arrow pc">→</div>
+              <div class="arrow mo">↓</div>
+              <div class="step" id="step04">
+                <div class="circle"></div>
+                <h3 class="en">step.4</h3>
+                <p>드레싱을 선택해주세요.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section03 End -->
+        <!-- section04 -->
+        <section id="section04">
+          <div class="container">
+            <h2 class="title en">Salady App Open</h2>
+            <p class="sub_title">
+              앱스토어/플레이스토어에서 "샐러디"를 검색하여<br
+                class="mo_only"
+              />
+              다운받으실 수 있습니다.
+            </p>
+            <div id="section04_wrap">
+              <div id="section04_img">
+                <img class="pc" src="images/main/App.png" alt="" />
+                <img class="mo" src="images/main/App_m.png" alt="" />
+              </div>
+              <div id="benefit_wrap">
+                <div class="benefit" id="benefit01">
+                  <h3>스탬프 적립 혜택,생일쿠폰!</h3>
+                  <p>
+                    스탬프 12개를 적립할 때마다 채소볼/곡물볼 쿠폰 발급!
+                    <br />생일에는 2000원 쿠폰 발급!
+                  </p>
+                </div>
+                <div class="benefit" id="benefit02">
+                  <h3>
+                    선불카드로 결제하고, 멤버십 혜택
+                    받으세요!
+                  </h3>
+                  <p>
+                    선불카드를 충전하고 매장에서 간편하게 결제 <br />자동으로
+                    스탬프와 풀잎 적립! 멤버십 혜택은 보너스!
+                  </p>
+                </div>
+                <div class="benefit" id="benefit03">
+                  <h3>
+                    기다리지말고 미리 주문! 샐럽오더
+                  </h3>
+                  <p>
+                    비대면으로 매장에 도착하기 전 미리 간편하게 <br />
+                    메뉴 주문과 결제를 한 번에 할 수 있는 서비스
+                  </p>
+                </div>
+                <div class="benefit" id="benefit04">
+                  <h3>소중한 지인에게 선물하기</h3>
+                  <p>지인에게 다양한 샐러디 금액권을 선물할 수 있는 서비스</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section04 End -->
+        <!-- section05 -->
+        <section id="section05">
+          <div class="container">
+            <div id="store_logo">
+              <img src="images/main/logo_big.png" alt="" />
+            </div>
+            <div id="find_store">
+              <h2>가맹점을 확인하세요.</h2>
+              <p>
+                오프라인 매장의 원하시는 지역을 선택하시거나 검색어를 입력해
+                주시길 바랍니다.
+              </p>
+              <form method="GET" action="">
+                <select id="find_city" class="inputbox" type="text">
+                  <option value="전체">지역을 선택하세요</option>
+                  <option value="서울">서울</option>
+                  <option value="인천">인천</option>
+                  <option value="경기">경기</option>
+                  <option value="강원">강원</option>
+                  <option value="대전">대전</option>
+                  <option value="충북">충북</option>
+                  <option value="충남">충남</option>
+                  <option value="대구">대구</option>
+                  <option value="울산">울산</option>
+                  <option value="부산">부산</option>
+                  <option value="경북">경북</option>
+                  <option value="경남">경남</option>
+                  <option value="전북">전북</option>
+                  <option value="전남">전남</option>
+                  <option value="광주">광주</option>
+                  <option value="세종">세종</option>
+                  <option value="제주">제주</option>
+                  <option value="해외">해외</option>
+                </select>
+                <select id="find_boroug" class="inputbox" type="text">
+                  <option value="전체">지역을 먼저 선택하세요.</option>
+                </select>
+                <input
+                  id="store_name"
+                  class="inputbox"
+                  type="text"
+                  placeholder="찾으시는 매장명을 입력하세요."
+                />
+                <div id="find_btn">조회하기</div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- section05 End -->
+        <!-- article -->
+        <article>
+          <div class="container">
+            <h2 class="title en">NEWS &#38; EVENT</h2>
+            <p class="sub_title">
+              샐러디의 소식과 진행중인 이벤트를 볼 수 있습니다.
+            </p>
+            <ul id="article_wrap">
+              <li class="article" id="article01">
+                <div class="dl">
+                  <img src="images/main/event01.png" alt="" />
+                </div>
+                <p class="dt">
+                  <span class="en">EVENT</span> 신규 앱 등급 업그레이드 이벤트
+                  <span id="further"> (*기존 앱 회원 대상)</span>
+                </p>
+              </li>
+              <li class="article" id="article02">
+                <div class="dl">
+                  <img src="images/main/event02.jpg" alt="" />
+                </div>
+                <p class="dt">
+                  <span class="en">NEWS</span> 여기저기서 매출 상승 기록 중인
+                  샐러드…'쑥쑥' 크는 샐러드 시장
+                </p>
+              </li>
+              <li class="article" id="article03">
+                <div class="dl">
+                  <img src="images/main/event03.jpg" alt="" />
+                </div>
+                <p class="dt">
+                  <span class="en">NEWS</span> 간편식·전문점·구독… 쑥쑥 크는
+                  1조원 샐러드 시장
+                </p>
+              </li>
+              <li class="article" id="article04">
+                <div class="dl">
+                  <img src="images/main/event04.png" alt="" />
+                </div>
+                <p class="dt">
+                  <span class="en">EVENT</span> 여름 한정 메뉴 10% 할인
+                </p>
+              </li>
+            </ul>
+            <div class="navigation" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="navigation" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </article>
+        <!-- article End -->
+      </main>
+      <footer>
+        <div class="container">
+          <div id="copyright">
+            회사명 : ㈜샐러디 사업자등록번호 : 681-86-00031<br />COPYRIGHT(C)
+            2021 OKZZINKYO. CO.LTD ALL RIGHT RESERVED.
+          </div>
+          <div id="sns">
+            <p>
+              <a href=""><i class="fas fa-comment"></i></a>
+            </p>
+            <p>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </p>
+            <p>
+              <a href=""><i class="fas fa-blog"></i></a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
