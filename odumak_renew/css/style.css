@@ -1,0 +1,681 @@
+/* 공통 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header,
+section,
+footer {
+  max-width: 1960px;
+  width: 100%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1490px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 공통 End */
+
+#wrap {
+  max-width: 1960px;
+  min-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 25px;
+  z-index: 9999;
+  transition-duration: 0.5s;
+}
+
+#in_header {
+  min-width: 960px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 248px;
+  height: 65px;
+  background-image: url(../images/logo_wh.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-indent: -9999px;
+}
+
+#menu > li {
+  float: left;
+  color: #ffffff;
+  line-height: 65px;
+}
+
+#menu > li > a {
+  display: block;
+  padding: 0 20px;
+}
+/* header End */
+
+#section01 {
+  height: 930px;
+  background-color: #000000;
+}
+
+#section01_slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background-image: url(../images/rustic_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#section01 > .container {
+  position: relative;
+}
+
+#section01_title {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-30%);
+  color: #ffffff;
+  border-left: 16px solid #c19f78;
+  padding-left: 40px;
+  opacity: 0;
+  animation: Titlemove 1s 0.5s forwards;
+}
+
+#section01_title > h2 {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 62px;
+  margin-bottom: 26px;
+}
+
+#section01_title > p {
+  font: 16px/24px "Times New Roman";
+}
+
+@keyframes Titlemove {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-55%);
+    opacity: 1;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* reservation */
+#reservation {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+#reservation_wrap {
+  display: flex;
+  align-items: center;
+  width: 1129px;
+  height: 125px;
+  background-color: #ffffff;
+}
+
+.select_wrap {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.select_wrap > label {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.select_wrap > label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+}
+
+select,
+input {
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* 숨기기 */
+  filter: alpha(opacity=0); /* IE8 숨기기 */
+}
+
+#themaBox {
+  width: 199px;
+  background-color: #ffffff;
+}
+
+#spaceBox {
+  width: 252px;
+  background-color: #f2f2f2;
+}
+
+#reservation_date::-webkit-calendar-picker-indicator,
+#reservation_date::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  opacity: 0; /* 숨기기 */
+  filter: alpha(opacity=0); /* IE8 숨기기 */
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  height: 50%;
+}
+
+.input_wrap {
+  width: 202px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 1;
+}
+
+.input_wrap input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#day {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+#month {
+  font-size: 15px;
+}
+
+#device_bar {
+  width: 1px;
+  height: 105px;
+  background-color: #828282;
+}
+
+.time_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#check {
+  width: 274px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: #c99a6e;
+  color: #ffffff;
+}
+/* section01 End */
+
+/* section02,03 공통 */
+.thema_title {
+  font-size: 85px;
+  line-height: 115px;
+  font-weight: 900;
+}
+
+.thema_desc {
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+  margin-bottom: 150px;
+}
+
+.thema_items h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.thema_items p {
+  font-size: 20px;
+}
+
+.thema_img {
+  overflow: hidden;
+  background-color: black;
+  opacity: 0;
+}
+
+.thema_img:hover img {
+  transform: scale(1.1);
+  opacity: 0.6;
+  transition-duration: 1.5s;
+}
+/* section02,03 공통 End*/
+
+#rustic {
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  color: #875c34;
+  padding: 210px 0;
+}
+
+#rustic .thema_items p {
+  color: #bda998;
+}
+
+#rustic01 {
+  float: right;
+}
+
+#rustic01 .thema_txt {
+  float: right;
+  margin: 120px 50px 0 0;
+  text-align: right;
+  opacity: 0;
+}
+
+#rustic01 .thema_img {
+  float: right;
+  position: relative;
+  right: -1000px;
+}
+
+#rustic02 {
+  float: left;
+}
+
+#rustic02 .thema_txt {
+  float: right;
+  margin: 120px 0 0 50px;
+  transform: translateY(185px);
+  opacity: 0;
+}
+
+#rustic02 .thema_img {
+  position: relative;
+  left: -700px;
+  transform: translateY(-60px);
+}
+
+#rustic03 {
+  float: right;
+  margin-top: -245px;
+}
+
+#rustic03 .thema_txt {
+  text-align: right;
+  margin: 180px 50px 50px 0;
+  opacity: 0;
+}
+
+#rustic03 .thema_img {
+  width: 680px;
+  position: relative;
+  right: -1000px;
+}
+
+#rustic03 .thema_img img {
+  width: 100%;
+}
+
+/* section02 Rustic End */
+
+#modern {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #3f3f3f;
+  padding: 210px 0;
+}
+
+#modern .thema_title {
+  text-transform: capitalize;
+}
+
+#modern .thema_items p {
+  color: #818181;
+}
+
+#modern01 {
+  float: left;
+}
+
+#modern01 > .thema_txt {
+  float: left;
+  margin: 120px 0 0 50px;
+  opacity: 0;
+}
+
+#modern01 > .thema_img {
+  float: left;
+  position: relative;
+  left: -1000px;
+}
+
+#modern02 {
+  float: right;
+  transform: translateY(90px);
+}
+
+#modern02 > .thema_txt {
+  margin: 120px 0 0 80px;
+  opacity: 0;
+}
+
+#modern02 > .thema_img {
+  position: relative;
+  right: -1000px;
+}
+
+#modern03 {
+  float: left;
+  margin-top: 270px;
+}
+
+#modern03 > .thema_txt {
+  margin: 120px 0 50px 0;
+  opacity: 0;
+}
+
+#modern03 > .thema_img {
+  margin-left: 50px;
+  position: relative;
+  left: -1000px;
+}
+/* section03 modern End */
+
+#section04 {
+  height: 500px;
+  background-image: url(../images/rustic_0.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 80%;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+#section04::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.3;
+  z-index: 10;
+}
+
+#section04_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+}
+
+#section04 h2 {
+  font-size: 46px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#section04 p {
+  margin-bottom: 48px;
+}
+
+#btn_detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 208px;
+  height: 54px;
+  font-size: 18px;
+  border: 1px solid #ffffff;
+  border-radius: 27px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+#btn_detail:hover {
+  transform: scale(1.1);
+}
+/* section04 End */
+
+#portfolio {
+  background-color: #fffaf4;
+  padding: 180px 0;
+  overflow: hidden;
+}
+
+#portfolio h2 {
+  font-size: 46px;
+  font-weight: 700;
+  text-align: center;
+  color: #3f3f3f;
+  margin-bottom: 76px;
+}
+
+#portfolio span {
+  color: #875c34;
+}
+
+#portfolio_slide {
+  position: relative;
+  left: 50%;
+  height: 540px;
+  margin-bottom: 76px;
+  transform: translateX(-50%);
+}
+
+.slide {
+  float: left;
+  width: 960px;
+  height: 100%;
+  margin-right: 40px;
+}
+
+.slide:last-child {
+  margin-right: 0;
+}
+
+.slide > img {
+  width: 100%;
+}
+
+#slide_bar {
+  position: relative;
+  width: 960px;
+  height: 2px;
+  margin: 0 auto;
+}
+
+#full_bar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #ebebeb;
+}
+
+#gauge_bar {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 4px;
+  background-color: #c99a6e;
+  transition-duration: 0.5s;
+}
+/* section05 portfolio End */
+
+footer {
+  font-size: 12px;
+  line-height: 1;
+  color: #898989;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
+
+#map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#in_footer {
+  height: 210px;
+  display: flex;
+}
+
+.footer_info {
+  padding: 40px 0 0 40px;
+}
+
+#footer01 {
+  flex-grow: 1;
+  background-color: #2d2d2d;
+  text-align: left;
+}
+
+#footer01 h2 {
+  color: #f3f3f3;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+#footer01 p:nth-of-type(1) {
+  line-height: 18px;
+  margin-bottom: 25px;
+}
+
+#footer02 {
+  flex-grow: 0;
+  width: 355px;
+  box-sizing: border-box;
+  background-color: #282828;
+}
+
+#footer02 p:first-child {
+  color: #f3f3f3;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+#footer02 p:last-child {
+  line-height: 18px;
+  font-weight: 300;
+}
+
+#footer02 em {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f3f3f3;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+#footer03 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-top: 0;
+  background-color: #252525;
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #696969b6;
+  border-radius: 50%;
+}
+/* footer End */
+
+#Topbtn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 170px;
+  right: 60px;
+  width: 60px;
+  height: 60px;
+  font-size: 12px;
+  background-color: #c99a6e;
+  color: #ffffff;
+  z-index: 40;
+  cursor: pointer;
+}
