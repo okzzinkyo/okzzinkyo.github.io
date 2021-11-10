@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+전체 color
+#444444
+#6c6b6b
+
+section02 man collection
+#49463e
+#6a665a
+
+section03 silk
+#584c40
+#6f60‘51
+#7a6858
+#ec6707
+#d9d3cd
+
+section04 perfume
+#223b48
+#568095
+#34596d
+
+footer
+#9e968b 
+*/

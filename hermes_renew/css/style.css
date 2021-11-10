@@ -1,0 +1,551 @@
+/* 공통 CSS */
+#wrap {
+  max-width: 1920px;
+  height: 100%;
+  position: relative;
+  color: #444444;
+  margin: 0 auto;
+}
+
+header,
+section,
+footer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section {
+  padding: 200px 0;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#in_header,
+.in_container,
+#in_footer {
+  width: 72.92%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "GmarketSansMedium";
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-family: "GmarketSansLight";
+  font-size: 1.25rem;
+}
+
+.bar {
+  width: 69px;
+  height: 1px;
+}
+
+.btn {
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.btn > a {
+  display: block;
+  padding: 15px 50px;
+}
+/* 공통 CSS End */
+
+/* header */
+header {
+  background-color: #ffffff;
+}
+
+#in_header {
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  display: block;
+  width: 74px;
+  cursor: pointer;
+}
+
+#menu_bar {
+  font-size: 1.75rem;
+  position: absolute;
+  right: 13.54%;
+  cursor: pointer;
+}
+
+#menu {
+  position: absolute;
+}
+/* header End */
+
+/* section01  */
+#home {
+  padding: 0;
+  background-color: #fffaf7;
+}
+
+#home .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#textHome {
+  position: absolute;
+  right: 13.54%;
+  bottom: 6.61%;
+  padding: 2.76% 3.23%;
+  /* padding: 53px 62px; */
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 26px 26px 59px 4px #00000010;
+  z-index: 10;
+}
+
+#textHome .title {
+  margin-bottom: 10px;
+  font-size: 2.625rem;
+  /* 42px */
+}
+
+#textHome .subtitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#textHome .date {
+  color: #6c6b6b;
+  line-height: 26px;
+}
+
+#img_big {
+  width: 51.98%;
+}
+
+#img01 {
+  width: 14.84%;
+  margin: 2% 0 0 7%;
+}
+
+#img02 {
+  width: 18.59%;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+#img02 img {
+  position: absolute;
+  bottom: 0;
+}
+/* section01 End*/
+
+/* section02 */
+
+#men {
+  background-color: #ffffff;
+}
+
+#men_part01 {
+  position: relative;
+  background-color: #f1eee5;
+  color: #49463e;
+  height: 36.76vw;
+  max-height: 720px;
+  box-sizing: border-box;
+}
+
+#men_part01 .in_container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#textMen .title {
+  margin-bottom: 1.571%;
+  /* 22px; */
+}
+
+#textMen .bar {
+  background-color: #49463e;
+  margin-bottom: 2.5%;
+  /* 35px */
+}
+
+#textMen p:nth-of-type(1) {
+  font-size: 1.125rem;
+  margin-bottom: 3px;
+}
+
+#textMen p:nth-of-type(2) {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: #6a665a;
+}
+
+.part01_men_img {
+  position: absolute;
+  width: 28.177%;
+  /* 541px */
+  right: 15.625%;
+  /* 300px */
+}
+
+.part01_men_img:first-of-type {
+  top: -3.125%;
+  /* 60px */
+}
+
+.part01_men_img:last-of-type {
+  top: 3.125%;
+  right: 17.1875%;
+  /* 60px */
+}
+
+#menTag {
+  width: 100%;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+#menTag span {
+  margin-bottom: 40px;
+}
+
+#menTag span:last-child {
+  margin-bottom: 0;
+}
+
+#men_part02 {
+  margin-top: 180px;
+}
+
+#men_part02 > .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#part02_men_img01 {
+  width: 43.311%;
+  /* 790px */
+}
+
+#men_item_wrap {
+  width: 52.632%;
+  /* 960px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#item_text h3 {
+  font-size: 3rem;
+}
+
+#item_text p {
+  font-size: 1.25rem;
+  margin-bottom: 0.822%;
+}
+
+#item_text .bar {
+  width: 35px;
+  background-color: #444444;
+  margin-bottom: 0.877%;
+}
+
+#item_img_wrap p {
+  margin-bottom: 0.877%;
+}
+
+#items_img {
+  overflow: hidden;
+}
+
+.item_img {
+  float: left;
+  width: 48.4375%;
+}
+
+#part02_men_img02 {
+  margin-right: 3.125%;
+}
+/* section02 Men End */
+
+/* section03 silk */
+#Silk {
+  background-color: #fffcf9;
+}
+
+#Silk_title {
+  text-align: center;
+  margin-bottom: 3.564%;
+  /* 65px */
+}
+
+#Silk_part01 {
+  display: flex;
+  position: relative;
+}
+
+#part01_silk_img01 {
+  width: 44.243%;
+  /* 807px */
+  margin-bottom: 270px;
+}
+
+#silk_item01_wrap {
+  width: 59.759%;
+  /* 1090px */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 8.24%;
+}
+
+#silk_item_img {
+  width: 100%;
+}
+
+.silk_item01 {
+  width: 48.899%;
+  /* 533px; */
+  float: left;
+}
+
+.silk_item01:first-child {
+  margin-right: 2.202%;
+  /* 24px */
+}
+
+.textSilk {
+  width: 60%;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2.25rem;
+}
+
+.textSilk .bar {
+  background-color: #ec6707;
+  margin-bottom: 40px;
+}
+
+#textSilk01 {
+  margin: 9.908% 0 0 17.431%;
+  /*108px 0 0 190px; */
+}
+
+#Silk_part02 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 4.66%;
+  /*  0 85px; */
+  margin-bottom: 100px;
+}
+
+#textSilk02 {
+  width: 29.105%;
+  margin-top: 4.36%;
+  /* 116px; */
+}
+
+#silk_item02_wrap {
+  width: 62.575%;
+}
+
+.silk_item02 {
+  width: 48.824%;
+  /* 518px */
+  float: left;
+}
+
+.silk_item02:first-child {
+  margin-right: 2.352%;
+  /* 25px */
+}
+
+#change {
+  position: absolute;
+  bottom: -100px;
+  width: 78.917%;
+}
+/* section03 silk End */
+
+/* secion04 perfume*/
+#perfume {
+  background-color: #ffffff;
+}
+
+#Perfume_part01 {
+  position: relative;
+  height: 37.5vw;
+  max-height: 720px;
+  background-color: #eef8fd;
+  background-image: url(../images/main/perfume/perfume02_1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+#Perfume_part01 > .in_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#textPerfume .title {
+  color: #223b48;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+#textPerfume span {
+  font-family: "GmarketSansMedium";
+  color: #223b48;
+  font-size: 2rem;
+}
+
+#textPerfume .bar {
+  background-color: #223b48;
+  margin-bottom: 35px;
+}
+
+#textPerfume > p {
+  color: #568095;
+  width: 360px;
+  line-height: 1.875;
+}
+
+#textPerfume .btn {
+  color: #34596d;
+  border-color: #568095;
+}
+
+#perfume_img01 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 35.521%;
+  /*682px; */
+}
+
+#Perfume_part02 {
+  margin-top: 120px;
+}
+
+#Perfume_part02 > .container {
+  padding: 0 4.385%;
+}
+
+.desc {
+  width: 100%;
+  overflow: hidden;
+}
+
+.textPerfume02 {
+  margin-left: 8%;
+  float: left;
+}
+
+.textPerfume02 h3 {
+  color: #444444;
+  font-weight: 400;
+  font-size: 2.8125rem;
+  margin-bottom: 16.5px;
+}
+
+.textPerfume02 p {
+  color: #6e6e6e;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+#desc02 {
+  margin-top: -14.803%;
+  /* -270px */
+}
+
+#desc03 {
+  margin-top: -10.197%;
+  /* -186px */
+}
+
+#desc01 > .textPerfume02 {
+  margin-top: 14.254%;
+  /* 260px */
+}
+
+#desc02 > .textPerfume02 {
+  margin-top: 26.3%;
+  /* 425px */
+}
+
+#desc03 > .textPerfume02 {
+  margin-top: 19.737%;
+  /* 360px */
+}
+
+.perfume_img02 {
+  width: 45.95%;
+  /* 761px */
+  float: left;
+}
+
+#part02_perfume_img02 {
+  float: right;
+}
+
+#part02_perfume_img03 {
+  width: 37.95%;
+  margin-left: 8%;
+}
+/* section04 perfume End */
+
+/* footer */
+footer {
+  padding: 70px 0;
+}
+
+#in_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copyright {
+  font-size: 0.9375rem;
+  line-height: 2.4;
+  font-weight: 300;
+  color: #9e968b;
+}
+
+#footer_logo {
+  width: 110px;
+  opacity: 0.7;
+  margin: 0 auto 70px;
+}
+
+.sns {
+  color: #6a6a6a;
+  font-size: 1.75rem;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.sns:last-child {
+  margin-right: 0;
+}
