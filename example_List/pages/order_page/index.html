@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>order page</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="cancel">
+        <h1>주문하기</h1>
+        <button type="button" class="btn_cancel">취소</button>
+      </div>
+      <from>
+        <!-- price/amount input-->
+        <div class="price_wrap">
+          <p class="order_item">닭꼬지 4종 세트</p>
+          <div class="price_info">
+            <div class="amount">
+              <button class="btn_minus" type="button">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input id="amount_input" type="number" />
+              <button class="btn_plus" type="button">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div class="total_price">14000원</div>
+          </div>
+        </div>
+        <div class="order_info">
+          <!-- 주문 요청 사항 -->
+          <label for="request_input">요청 사항</label>
+          <div class="request message">
+            <input
+              id="request_input"
+              type="text"
+              placeholder="요청사항을 입력해주세요(최대 20자)"
+              maxlength="20"
+            />
+          </div>
+          <!-- 배송 메세지 -->
+          <label for="delivery_input">배송 메세지</label>
+          <div class="delivery message">
+            <input
+              id="delivery_input"
+              type="text"
+              placeholder="배송 메세지를 입력해주세요."
+            />
+            <div class="btn_down"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <input id="delivery_input2" type="text" />
+        </div>
+        <div class="btn_order">
+          <button class="btn_add" type="button">장바구니 담기</button>
+          <button class="btn_buy" type="button">바로 구매</button>
+        </div>
+      </from>
+      <!-- POP UP -->
+      <div class="black"></div>
+      <div class="popup">
+        <p class="popup_title">배송 메세지</p>
+        <ul class="popup_item">
+          <li>문 앞에 두고 가주세요.</li>
+          <li>경비실에 맡겨주세요.</li>
+          <li>배송 전 연락바랍니다.</li>
+          <li>파손 주의 상품입니다.</li>
+          <li>직접 입력</li>
+        </ul>
+        <button class="close" type="button">닫기</button>
+      </div>
+    </div>
+    <script>
+      $(window).ready(function () {
+        $(".popup,.black,#delivery_input2").hide();
+        console.log("숨었니?");
+        //delivery_input slideUp,Down, 초기 설정
+        $("#delivery_input,.btn-down").click(function () {
+          $("#delivery_input").blur();
+          $("#delivery_input2").hide();
+          $(".popup").slideDown(500);
+          $(".black").show();
+          console.log("나왔니?");
+        });
+        $(".btn_down").click(function () {
+          $(".popup").slideDown(500);
+          $(".black").show();
+          console.log("다시 숨었니?");
+        });
+        $(".close,.black").click(function () {
+          $(".popup").slideUp(500);
+          $(".black,#delivery_input2").hide();
+          $("#delivery_input").val("");
+        });
+        // selected delivery_input value 처리
+        $(".popup_item li").click(function () {
+          $(this).addClass("selected").siblings().removeClass("selected");
+          console.log("선택됨");
+          var selected_message = $(".selected").text();
+          if (selected_message == "직접 입력") {
+            $("#delivery_input2").val("").show().focus();
+            $("#delivery_input").val(selected_message);
+            $(".popup").slideUp(500);
+            $(".black").hide();
+          } else {
+            $("#delivery_input2").val(selected_message);
+            $("#delivery_input").val(selected_message);
+            $(".popup").slideUp(500);
+            $(".black").hide();
+            if (
+              $("#request_input").val() == "" ||
+              $("#delivery_input2").val() == ""
+            ) {
+              console.log("제발");
+              $(".btn_add,.btn_buy").attr("disabled", true);
+              $(".btn_add").css("color", "#505050");
+              $(".btn_buy")
+                .css("background-color", "#d8d8d8")
+                .css("color", "#505050");
+            } else {
+              console.log("성공!!");
+              $(".btn_add,.btn_buy").attr("disabled", false);
+              $(".btn_add").css("color", "#000000");
+              $(".btn_buy")
+                .css("background-color", "royalblue")
+                .css("color", "#ffffff");
+            }
+          }
+        });
+      });
+
+      $(window).ready(function () {
+        var n = 1;
+        $("#amount_input").val(n);
+        $(".btn_minus").attr("disabled", "disabled");
+        $(".btn_minus").css("color", "#c2c2c2");
+        console.log("btn_minus 비활성");
+
+        // btn-plus
+        $(".btn_plus").bind("click", function () {
+          $("#amount_input").val(++n);
+          if (n >= 10) {
+            $(".btn_plus").attr("disabled", "disabled");
+            $(".btn_plus").css("color", "#c2c2c2");
+          } else {
+            $(".btn_minus").removeAttr("disabled");
+            $(".btn_minus").css("color", "royalblue");
+          }
+          console.log("+1");
+        });
+
+        // btn-minus
+        $(".btn_minus").bind("click", function () {
+          $("#amount_input").val(--n);
+          if (n == 1) {
+            $(".btn_minus").attr("disabled", "disabled");
+            $(".btn_minus").css("color", "#c2c2c2");
+          }
+        });
+
+        // total price
+        $(".btn_plus,.btn_minus").on("click", function () {
+          var qty = $("#amount_input").val() * 1;
+          var basic_price = parseInt(14000);
+          var total_price = basic_price * qty;
+          $(".total_price").html(total_price + "원");
+        });
+      });
+
+      $("input").on("input", function () {
+        if (
+          $("#request_input").val() == "" ||
+          $("#delivery_input2").val() == ""
+          // val() == "" || ::: val()가 "" 이거나
+
+          // $("#request_input").val() != "" && ::: val()가 ""가 아니고,
+        ) {
+          console.log("제발");
+          $(".btn_add,.btn_buy").attr("disabled", true);
+          $(".btn_add").css("color", "#505050");
+          $(".btn_buy")
+            .css("background-color", "#d8d8d8")
+            .css("color", "#505050");
+        } else {
+          console.log("성공!!");
+          $(".btn_add,.btn_buy").attr("disabled", false);
+          $(".btn_add").css("color", "#000000");
+          $(".btn_buy")
+            .css("background-color", "royalblue")
+            .css("color", "#ffffff");
+        }
+      });
+    </script>
+  </body>
+</html>
