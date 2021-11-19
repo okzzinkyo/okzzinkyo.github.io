@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keypress</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .keyword {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 500px;
+      }
+
+      .tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        margin: 2px;
+        padding: 3px 5px;
+        font-size: 10px;
+        vertical-align: middle;
+        color: white;
+        background-color: rgb(0, 119, 255);
+        border-radius: 5px;
+        border: none;
+      }
+
+      button:focus,
+      button:active {
+        outline: none;
+        box-shadow: none;
+      }
+
+      .tag:hover {
+        background-color: rgb(143, 143, 143);
+      }
+
+      .red-border {
+        outline: crimson 1px solid;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div class="tagbox">
+      <input type="text" id="text" placeholder="키워드를 입력하세요." />
+      <div class="keyword"></div>
+    </div>
+  </body>
+  <script>
+    $("#text").keypress(function (e) {
+      if (e.keyCode == 13) {
+        console.log("엔터성공");
+        // Enter key down
+        var texttag = $("#text").val();
+        $(".keyword").append(
+          "<button class='tag' id='" +
+            texttag +
+            "' onclick='deletetag(`" +
+            texttag +
+            "`)'>" +
+            texttag +
+            "</button>"
+        );
+        $("#text").val("");
+        console.log("keyword 들어감");
+      }
+    });
+
+    function deletetag(id) {
+      $("#" + id).remove();
+    }
+  </script>
+</html>
+
+<!-- 
+  *** click function으로 정의
+  <script>
+  $("#text").keypress(function (e) {
+      if (e.keyCode == 13) {
+        console.log("엔터성공");
+        // Enter key down
+        var texttag = $("#text").val();       
+        $(".keyword").append(
+          "<button class='tag' id='" +
+            texttag  +
+            "' onclick='deletetag(`"+texttag+"`)'>" +
+            texttag +
+            "</button>"
+        );
+        $("#text").val("");
+        var deletetag = $('.tag').click(function(){
+        console.log(this);
+        $(this).remove();
+   });
+      }
+    });
+</script> 
+-->
+<!-- 
+*** data-id 사용
+<script>
+  $("#text").keypress(function (e) {
+      if (e.keyCode == 13) {
+        console.log("엔터성공");
+        // Enter key down
+        var texttag = $("#text").val();
+        $(".keyword").append(
+          "<button class='tag' data-id='" +
+            texttag  +
+            "'>" +
+            texttag +
+            "</button>"
+        );
+        $("#text").val("");
+        var deletetag = $('.tag').click(function(){
+      var id =$(this).data('id');
+      $('button[data-id="'+id+'"]').remove();
+   });
+      }
+    });
+</script> 
+-->
+
+<!-- 
+[- 1번째 답안- ]
+function deletetag( 여기엔 변수라서 "" 절대 금지)
+$("#" + id  여기도 변수라서 절대 금지").remove();
+
+변수는 밖에 "id" 있으면, id 안에 있는 값이 아니라 그냥 글자 id가 됨.
+변수는 val() 값을 들고오긴 했지만, text가 아닐 경우도 있어서 text로 만들어줄 ""//''//``가 필요
+
+deletetag(id)이 형태일때는 숫자는 인식 가능하지만, 문자라면 text를 변수로 취급하게되고, 그 변수는 존재하지 않기 때문에 작동X
+- onclick='deletetag(`"+texttag+"`)'  {여기서 `` 없으면 +texttag+"를 변수로 취급}
+
+onclick은 html과 javascript의 연결점
+
+
+[- 2번째 답안 -]
+.tag가 클릭 됐을때 data-id를 id 라는 변수에 담고 그 id를 가진 애를 지운거라(.tag 가진 class를 click한거니까) 따로 onclick 해줄필요 없음
+
+** 그럼 굳이 deletetag 정의를 왜한거에용???
+
+- deletetag는 함수 이름으로 함수를 이름 없이 정의하면 무한으로 중첩이 된다.
+  그럼 텍스트 엔터 칠때마다 함수가 쌓여 한번 클릭에 100번 지운것처럼 작동할수가 있어서
+  var deletetag = ~~function 이렇게 함수 정의를하면, 함수를 계속 덮어 씌워서 함수가 여러번 정의 되도 한번 밖에 작동을 안함
+ -->
