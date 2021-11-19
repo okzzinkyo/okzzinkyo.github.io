@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkbox_background_change</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .back-red {
+        background-color: red;
+      }
+      .inverted {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body class="back-red">
+    <input type="checkbox" value="blue" id="change" />
+    <label for="change">배경</label>
+  </body>
+  <script>
+    $("#change").change(function () {
+      // **** .change 해당 selector의 소스가 변했을때 작동하는 함수로 function으로 무엇을 할지 정의를 내린다.
+      // change, on(hover), click, trigger 등등 특정 행위가 없는 이벤트 속성은 function으로 행동이 일어 났을 때 해야할 것을 정의해줘야 한다.
+
+      if ($("#change").is(":checked")) {
+        // checked는 .is(":checked")보단  .prop('checked'); .attr('checked'); 구문 사용을 더 선호한다.
+
+        // **** .is(); 해당 selector가 있으면
+        // ex] $('body').is('#addText'); => body안에 #addText가 있으면
+
+        $(".back-red").addClass("inverted");
+        // 같은 속성을 입힐땐 removeClass('backr-red')를 해주면 좋다.
+        // 다만, 여기선 앞에 지정한 class를 찾을 수 없게 되므로 id 지정 혹은 selector 자체를 불러서 addClass 처리]
+      } else {
+        $(".back-red").removeClass("inverted");
+      }
+    });
+  </script>
+</html>
+
+<!-- 
+  **** .attr 속성이 존재하는가? 아닌가? 를 나타내는 속성
+  .attr('name'), .attr('id') 처럼 html 소스로 존재하는 거의 모든 selector를 jquery상으로 가져올수 있다. 
+ -->

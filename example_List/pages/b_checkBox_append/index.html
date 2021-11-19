@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>append</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body class="bg-white">
+    <input type="checkbox" value="addText1" id="check01" />
+    <label for="check01">check01</label>
+    <div id="addText1"><p>========TEXT 1번 칸 ============</p></div>
+    <input type="checkbox" value="addText1" id="check02" />
+    <label for="check02">check02</label>
+    <div id="addText2"><p>========TEXT 2번 칸 ============</p></div>
+    <input type="checkbox" value="addText1" id="check03" />
+    <label for="check03">check01</label>
+    <div id="addText3"><p>========TEXT 3번 칸 ============</p></div>
+  </body>
+  <script>
+    $("#check01").change(function () {
+      if ($("#check01").prop("checked") == true) {
+        $("#addText1").append("<h2>정답입니다.</h2>");
+      } else {
+        $("h2").remove();
+      }
+    });
+    // .prop("checked"); 체크됐는지 확인 ==true, != true 비교하기
+    // .prop("checked",true); 체크하기
+
+    $("#check02").change(function () {
+      if ($("#check02").prop("checked")) {
+        $("#addText2").prepend("<h2>틀렸습니다.</h2>");
+      } else {
+        $("h2").remove();
+      }
+    });
+    $("#check03").change(function () {
+      if ($("#check03").prop("checked")) {
+        $("#addText3").before("<h2>정답이 아닙니다.</h2>");
+      } else {
+        $("h2").remove();
+      }
+    });
+  </script>
+</html>
