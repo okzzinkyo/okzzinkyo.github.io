@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dag & Drop</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        padding: 15px;
+      }
+      .drop-box {
+        width: 200px;
+        height: 200px;
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #c2c2c2;
+        border: darkseagreen 5px dashed;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img-box {
+        width: 500px;
+        height: 210px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .img {
+        width: 100px;
+        height: 100px;
+        padding: 0 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="drop-box" ondragend="dragend">드래그로 사진을 넣어봐.</div>
+      <div class="img-box">
+        <img class="img" src="../../assets/images/photo01.jpg" />
+        <img class="img" src="../../assets/images/photo02.jpg" />
+        <img class="img" src="../../assets/images/fade01.jpg" />
+        <img class="img" src="../../assets/images/fade02.jpg" />
+        <img class="img" src="../../assets/images/fade03.jpg" />
+        <img class="img" src="../../assets/images/photo04.jpg" />
+        <img class="img" src="../../assets/images/photo03.jpg" />
+        <img class="img" src="../../assets/images/photo05.jpg" />
+        <img class="img" src="../../assets/images/photo06.jpg" />
+      </div>
+    </div>
+    <script>
+      $(".img").draggable({
+        opacity: 0.8,
+      });
+
+      // $("div:not(.drop-box)").droppable(
+      //   "disable"
+      //   //{} drop: function (event, ui) {
+      //   //   $("img[class$='dragging']").css("left", "").css("top", "");
+      //   // },
+      //   // }
+      // );
+
+      $(".drop-box").droppable({
+        drop: function (event, ui) {
+          // Keep the left edge of the element
+          // at least 100 pixels from the container
+          ui.position.left = Math.min(100, ui.position.left);
+          $("img").show();
+          $("img[class$='dragging']").hide();
+          $("img[class$='dragging']").css("left", "").css("top", "");
+          $("img[class$='dragging']").css("transform", "scale(1)");
+          // $("img[class$='dragging']").hide();
+          $("img[class$='dragging']").addClass("dropped");
+          var bg_img = $(".dropped").attr("src");
+          $(".drop-box")
+            .css("backgroundImage", "url(" + bg_img + ")")
+            .css("border", "darkseagreen 5px solid")
+            .text("");
+          $(".dropped").removeClass("dropped");
+        },
+        over: function (event, ui) {
+          $("img[class$='dragging']").css("transform", "scale(2)");
+          console.log("2배");
+        },
+        out: function (event, ui) {
+          $("img[class$='dragging']").css("transform", "scale(1)");
+          console.log("원래대로");
+        },
+        deactivate: function (event, ui) {
+          $("img").css("left", "").css("top", "");
+        },
+      });
+    </script>
+  </body>
+</html>
