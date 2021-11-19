@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade In, Fade out (button)</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    button:active,
+    button:focus {
+      outline-style: none;
+    }
+
+    button {
+      border: none;
+      background: none;
+    }
+    .wrap {
+      position: relative;
+    }
+    .btn {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-icon {
+      color: red;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="fade-img">
+        <img src="../assets/images/fade01.jpg" alt="이미지01" />
+      </div>
+      <button class="btn">
+        <i class="fas fa-circle btn-icon"></i>
+      </button>
+    </div>
+    <script>
+      $(".btn").on("click", function () {
+        if ($(".fade-img").css("display") == "none") {
+          $(".fade-img").fadeIn();
+        } else {
+          $(".fade-img").fadeOut();
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!-- 
+  이렇게 이벤트 자체를 더하고 빼고도 가능!!
+  function scrollEvent() {
+      var hT = $('.tlt1').offset().top,
+          hH = $('.tlt1').outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop();
+      if (wS > (hT+hH-wH)){
+          console.log('tlt on the view!');
+          window.removeEventListener("scroll", scrollEvent);
+      }
+    }
+    window.addEventListener("scroll", scrollEvent); 
+  -->

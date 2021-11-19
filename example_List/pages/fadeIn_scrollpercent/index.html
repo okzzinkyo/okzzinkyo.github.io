@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade In, Fade out (scroll)</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+  </head>
+  <style>
+    .wrap {
+      position: relative;
+      height: 2000px;
+    }
+    .fade-img img {
+      position: absolute;
+      top: 500px;
+      left: 300px;
+      width: 300px;
+      height: 300px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="fade-img hidden">
+        <img src="../assets/images/fade03.jpg" />
+      </div>
+    </div>
+  </body>
+  <script>
+    var count = 0;
+    $(window).scroll(function () {
+      Top = $(window).scrollTop();
+      if (Top > 80 && Top < 320 && count == 0) {
+        $(".fade-img").fadeIn();
+        count = 1;
+        console.log("변수=1");
+      } else if (Top > 320 && count == 1) {
+        $(".fade-img").fadeOut();
+        count = 0;
+        console.log("fadeout 끝?");
+      }
+    });
+  </script>
+</html>
