@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hollys 따라하기</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header    -->
+      <div class="header clearfix">
+        <h1 id="logo">
+          <a href="#"><img src="img/logo.gif" alt="logo" /></a>
+        </h1>
+        <div class="header_banner">
+          <ul id="banner">
+            <li class="banner_item">
+              <a href="#"><img src="img/gnb_smenu01.png" alt="가맹문의" /></a>
+            </li>
+            <li class="banner_item">
+              <a href="#"><img src="img/gnb_smenu02_2.gif" alt="아카데미" /></a>
+            </li>
+            <li class="banner_item">
+              <a href="#"><img src="img/gnb_smenu04.gif" alt="기업특판" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="header_util">
+          <ul id="util">
+            <li>
+              <a href="#"
+                ><img src="img/util_login.gif" alt="멤버십 로그인"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/util_join.gif" alt="멤버십 가입" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/util_09.gif" alt="고객센터" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/util_05.gif" alt="English" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/util_chinese.gif" alt="中文" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu_bg"></div>
+      <!-- //header    -->
+      <!-- nav -->
+      <nav id="nav">
+        <ul id="menu" class="clearfix">
+          <li class="menu_item">
+            <a href="#"><img src="img/gnb_01_on.png" alt="Menu" /></a>
+            <p class="menu_item_ko">메뉴</p>
+            <ul class="submenu hide">
+              <li class="submenu_item"><a href="#">New menu</a></li>
+              <li class="submenu_item"><a href="#">COFFEE</a></li>
+              <li class="submenu_item"><a href="#">라떼 · 초콜릿 · 티</a></li>
+              <li class="submenu_item"><a href="#">할리치노 · 빙수</a></li>
+              <li class="submenu_item"><a href="#">스파클링 · 아이스티</a></li>
+              <li class="submenu_item"><a href="#">베이커리·스낵MD</a></li>
+              <li class="submenu_item"><a href="#">MD상품</a></li>
+              <li class="submenu_item"><a href="#">MD원두</a></li>
+            </ul>
+          </li>
+          <li class="menu_item">
+            <a href="#"><img src="img/gnb_02_on.png" alt="HOLLYS Mall" /></a>
+            <p class="menu_item_ko">할리스 몰</p>
+            <ul class="submenu hide">
+              <li class="submenu_item"><a href="#">할리스콘</a></li>
+              <li class="submenu_item"><a href="#">할리스 기프트카드</a></li>
+            </ul>
+          </li>
+          <li class="menu_item">
+            <a href="#"><img src="img/gnb_03_on.png" alt="Membership" /></a>
+            <p class="menu_item_ko">멤버십</p>
+            <ul class="submenu hide">
+              <li class="submenu_item">
+                <a href="#">스마트 오더 서비스안내</a>
+              </li>
+              <li class="submenu_item"><a href="#">멤버십 혜택안내</a></li>
+            </ul>
+          </li>
+          <li class="menu_item">
+            <a href="#"><img src="img/gnb_04_on.png" alt="HOLLYS News" /></a>
+            <p class="menu_item_ko">이벤트 및 공지</p>
+            <ul class="submenu hide">
+              <li class="submenu_item"><a href="#">Notice</a></li>
+              <li class="submenu_item"><a href="#">Event</a></li>
+            </ul>
+          </li>
+          <li class="menu_item">
+            <a href="#"><img src="img/gnb_05_on.png" alt="Store" /></a>
+            <p class="menu_item_ko">매장</p>
+            <ul class="submenu hide">
+              <li class="submenu_item"><a href="#">국내</a></li>
+              <li class="submenu_item"><a href="#">해외</a></li>
+            </ul>
+          </li>
+          <li class="menu_item">
+            <a href="#"><img src="img/gnb_06_on.png" alt="HOLLYS is" /></a>
+            <p class="menu_item_ko">할리스 소개</p>
+            <ul class="submenu hide">
+              <li class="submenu_item"><a href="#">HOLLYS Coffee</a></li>
+              <li class="submenu_item"><a href="#">About Coffee</a></li>
+              <li class="submenu_item"><a href="#">CSR</a></li>
+              <li class="submenu_item"><a href="#">Gallery</a></li>
+              <li class="submenu_item"><a href="#">혜택 안내</a></li>
+              <li class="submenu_item"><a href="#">본사 위치</a></li>
+              <li class="submenu_item"><a href="#">채용 안내</a></li>
+              <li class="submenu_item"><a href="#">가맹 개설안내</a></li>
+              <li class="submenu_item"><a href="#">B2B 사업 소개</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- // nav -->
+      <section id="slide" class="swiper-container">
+        <!--  Additional required wrapper-->
+        <div class="swiper-wrapper">
+          <!--    Slides-->
+          <div class="swiper-slide">
+            <img src="img/mainBanner_202001031143154040.jpg" alt="이미지1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/mainBanner_202001031142298180.jpg" alt="이미지2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/mainBanner_202001031141043660.jpg" alt="이미지3" />
+          </div>
+        </div>
+        <!--  If we need pagination-->
+        <div class="swiper-pagination"></div>
+      </section>
+
+      <div class="main">
+        <section class="section01">
+          <div class="main_menu">
+            <div class="menu_tit"><img src="img/menu_tit.gif" alt="" /></div>
+            <div><img src="img/menu_img01.gif" alt="" /></div>
+          </div>
+          <div class="main_mall clearfix">
+            <p class="mall_tit"><img src="img/mall_tit.gif" /></p>
+            <p><img src="img/mall_txt.gif" /></p>
+            <ul class="mallprodut">
+              <li>
+                <a href="#"
+                  ><img
+                    src="img/mallProdut_201905030111029300.png"
+                  /><br />리스트레또 <br />딜라이트R</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="img/mallProdut_201904151019294210.png"
+                  /><br />에그마요</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="img/mallProdut_201904151016386800.png"
+                  /><br />올리브 베이컨 치아바타</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="main_store">
+            <div class="store_tit"><img src="img/store_tit.gif" alt="" /></div>
+            <div><img src="img/store_img01.gif" alt="" /></div>
+          </div>
+        </section>
+        <section class="section02">
+          <div class="main_banner clearfix">
+            <div class="membership">
+              <a href="#"
+                ><img src="img/img_banner_membership.jpg" alt="멤버십"
+              /></a>
+            </div>
+            <div class="gifts">
+              <a href="#"
+                ><img src="img/20190213_pc.jpg" alt="기프트 카드"
+              /></a>
+            </div>
+          </div>
+          <div class="main_list_wrap">
+            <ul class="main_list clearfix">
+              <li class="main_list_item">
+                <a href="#"
+                  ><img src="img/academy_tit.gif" alt="academy" />
+                  <p>할리스커피 아카데미와 함께하는 즐거운 커피 여행!</p>
+                  <p class="going">
+                    <img src="img/ico_arrow.gif" alt="바로가기" /> 바로가기
+                  </p>
+                </a>
+              </li>
+              <li class="main_list_item">
+                <a href="#"
+                  ><img src="img/b2b_tit.gif" alt="b2b" />
+                  <p>
+                    할리스 F&B는 20년의 커피 노하우를<br />기반으로 한 할리스
+                    B2B 솔루션을<br />소개합니다.
+                  </p>
+                  <p class="going">
+                    <img src="img/ico_arrow.gif" alt="바로가기" /> 바로가기
+                  </p>
+                </a>
+              </li>
+              <li class="main_list_item">
+                <a href="#">
+                  <img src="img/news_tit.gif" alt="news" />
+                  <img class="" src="img/ico_arrow.gif" alt="바로가기" />
+                  <ul style="color: #6f6f6f">
+                    <li>
+                      <span
+                        style="
+                          float: left;
+                          width: 153px;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                        "
+                        ><nobr
+                          >SKTelecom T멤버십 VIP Pick 서비스 이용 불가 매장
+                          안내</nobr
+                        ></span
+                      ><span style="float: right">04-11</span>
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          float: left;
+                          width: 153px;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                        "
+                        ><nobr>LGU+ 멤버십 제휴 제외매장 안내</nobr></span
+                      ><span style="float: right">05-02</span>
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          float: left;
+                          width: 153px;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                        "
+                        ><nobr
+                          >2020 디즈니 콜라보레이션 플래너 세트 증정
+                          이벤트</nobr
+                        ></span
+                      ><span style="float: right">10-31</span>
+                    </li>
+                  </ul></a
+                >
+              </li>
+              <li>
+                <ul class="list_etc clearfix">
+                  <li>
+                    <a href="#"
+                      ><img
+                        class="img_etc bar_no"
+                        src="img/img_etc01.gif"
+                      /><br />창업안내</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        class="img_etc"
+                        src="img/img_etc02.gif"
+                      /><br />아카데미 강좌</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        class="img_etc"
+                        src="img/img_etc03.gif"
+                      /><br />고객문의</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section03">
+          <!-- Live SNS -->
+          <div class="sns_wr" style="height: 142px; overflow: hidden">
+            <p class="sns_tit">
+              <img src="img/sns_tit.gif" alt="HOLLYS LIVE" />
+              <a href="https://www.facebook.com/EnjoyHollys" target="_blank"
+                ><img src="img/sns_facebook.gif" alt="facebook"
+              /></a>
+              <a
+                href="https://www.instagram.com/hollyscoffeekr/"
+                target="_blank"
+                ><img src="img/sns_instagram.gif" alt="인스타그램"
+              /></a>
+              <a href="http://hollyscoffeeblog.com/" target="_blank"
+                ><img src="img/sns_blog.gif" alt="블로그"
+              /></a>
+              <!--a href="https://twitter.com/Enjoy_Hollys" target="_blank"><img src="/websrc/images/main/sns_twitter.gif" alt="twitter"></a-->
+            </p>
+            <p class="sns_list">
+              <img src="img/ajax-loader.gif" alt="loader" />
+            </p>
+          </div>
+          <!-- // Live SNS -->
+        </section>
+      </div>
+      <footer id="footer">
+        <div class="footer_inner">
+          <div>
+            <a href="#"><b>개인정보처리방침</b></a
+            ><a href="#">서비스이용약관</a><a href="#">멤버십이용약관</a
+            ><a href="#">고객문의</a><a href="#">고객설문</a
+            ><a href="#">사이트맵</a><a href="#">BI 소개</a>
+          </div>
+          <p>
+            법인명: (주) 할리스에프앤비 대표자: 김유진 사업자등록번호
+            211-87-61044 통신판매업: 제2019-서울종로-0193호 <br />주소 :
+            서울특별시 종로구 율곡로 88 삼환빌딩 8층 (운니동) 대표전화 :
+            02-2188-7100 (가맹문의 : 1670-4432)
+          </p>
+          <p class="adress">
+            COPYRIGHT (C) HOLLYS COFFEECo., Ltd. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    //서버메뉴보이기
+    if ($(window).width() < 768) {
+      $("#nav>ul>li").on("click", function () {
+        $(this).find(".submenu").stop().slideToggle();
+      });
+    } else {
+      $("#nav>ul>li").hover(
+        function () {
+          $(".submenu").stop().slideDown(100);
+          $(".submenu_bg").stop().slideDown(100);
+        },
+        function () {
+          $(".submenu").stop().slideUp(100);
+          $(".submenu_bg").stop().slideUp(100);
+        }
+      );
+    }
+  </script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <!-- Initialize Swiper-->
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</html>
