@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fade In, Fade out (button)</title>
-    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <!-- Fontawesome -->
     <link
       rel="stylesheet"
@@ -37,18 +41,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 20px;
-      height: 20px;
+      width: 50px;
+      height: 50px;
     }
 
     .btn-icon {
+      font-size: 30px;
       color: red;
     }
   </style>
   <body>
     <div class="wrap">
       <div class="fade-img">
-        <img src="../assets/images/fade01.jpg" alt="이미지01" />
+        <img src="../../assets/images/fade01.jpg" alt="이미지01" />
       </div>
       <button class="btn">
         <i class="fas fa-circle btn-icon"></i>
