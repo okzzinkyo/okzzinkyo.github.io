@@ -1,0 +1,106 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* font family */
+.ff-title {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.ff-desciption {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* font size */
+.fs-tiny {
+  font-size: 11px;
+}
+
+.fs-small {
+  font-size: 12px;
+}
+
+.fs-base {
+  font-size: 13px;
+  line-height: 1.769230769230769;
+}
+
+.fs-medium {
+  font-size: 14px;
+}
+
+.fs-large {
+  font-size: 18px;
+  line-height: 2.222222222222222;
+}
+
+.fs-Xlarge {
+  font-size: 30px;
+}
+
+.fs-h1 {
+  font-size: 120px;
+  line-height: 1;
+}
+
+.fs-h2 {
+  font-size: 80px;
+  line-height: 1;
+}
+
+/* font weight */
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/* color*/
+.text-dark {
+  color: #000000;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-primary {
+  color: #464646;
+}
+
+.text-secondary {
+  color: #d2d2d2;
+}
+
+.text-teriary {
+  color: #191929;
+}
+
+.text-menu {
+  color: #7f7f7f;
+}
+
+.text-contact {
+  color: #2c2c2c;
+}
+
+.text-icon {
+  color: #6b6c70;
+}
+.text-footer {
+  color: #cccccc;
+}
