@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrollPercent</title>
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+  <body>
+    <section class="black">
+      <div class="triangle fadeToogle" id="slideToggle01"></div>
+    </section>
+    <section class="yellow">
+      <div class="triangle fadeToogle" id="slideToggle02"></div>
+            <p class="text-box">퍼센트</p>
+    </section>
+    <section class="black">
+      <div class="triangle fadeToogle" id="slideToggle03"></div>
+    </section>
+    <script>
+
+      $(window).scroll(function () {
+        // calculate the percentage the user has scrolled down the page
+        var scrollPercent =
+          ($(window).scrollTop() / $(document).height()) * 100;
+          
+          if(scrollPercent >=1){
+            $("#slideToggle01").fadeIn(500);
+            $("#slideToggle01").slideDown(500);        
+          }
+          
+          if(scrollPercent <1){
+            $("#slideToggle01").fadeOut(500);
+            $("#slideToggle01").slideUp(500);
+        
+          }
+
+          if(scrollPercent >=15){
+            $("#slideToggle02").fadeIn(500);
+            $("#slideToggle02").slideDown(500);
+            
+          } 
+
+          if(scrollPercent <15){
+            $("#slideToggle02").fadeOut(500);
+            $("#slideToggle02").slideUp(500);
+            
+            
+          } 
+
+          if(scrollPercent >=24){
+            $("#slideToggle03").fadeIn(500);
+            $("#slideToggle03").slideDown(500);
+            
+          } 
+
+          if(scrollPercent <24){
+            $("#slideToggle03").fadeOut(500);
+            $("#slideToggle03").slideUp(500);
+            
+          }
+
+        $(".text-box").text(scrollPercent + "%");
+      });
+      
+    </script>
+  </body>
+</html>

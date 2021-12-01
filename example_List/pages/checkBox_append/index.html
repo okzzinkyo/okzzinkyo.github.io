@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>append</title>
+    <title>append, prepend, before, after</title>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -13,18 +13,30 @@
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <style></style>
+    <style>
+      #wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #wrap > div {
+        padding: 10px 0;
+      }
+    </style>
   </head>
-  <body class="bg-white">
-    <input type="checkbox" value="addText1" id="check01" />
-    <label for="check01">check01</label>
-    <div id="addText1"><p>========TEXT 1번 칸 ============</p></div>
-    <input type="checkbox" value="addText1" id="check02" />
-    <label for="check02">check02</label>
-    <div id="addText2"><p>========TEXT 2번 칸 ============</p></div>
-    <input type="checkbox" value="addText1" id="check03" />
-    <label for="check03">check03</label>
-    <div id="addText3"><p>========TEXT 3번 칸 ============</p></div>
+  <body>
+    <div id="wrap">
+      <input type="checkbox" value="addText1" id="check01" />
+      <label for="check01">check01</label>
+      <div id="addText1"><p>========TEXT 1번 칸 ============</p></div>
+      <input type="checkbox" value="addText1" id="check02" />
+      <label for="check02">check02</label>
+      <div id="addText2"><p>========TEXT 2번 칸 ============</p></div>
+      <input type="checkbox" value="addText1" id="check03" />
+      <label for="check03">check03</label>
+      <div id="addText3"><p>========TEXT 3번 칸 ============</p></div>
+    </div>
   </body>
   <script>
     $("#check01").change(function () {
