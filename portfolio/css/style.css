@@ -1,0 +1,476 @@
+/* 공통 */
+section {
+  position: relative;
+  width: 1122px;
+  height: 793px;
+  margin: 25px auto;
+  background-color: #ffffff;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+}
+
+#wrap {
+  width: 100%;
+}
+
+/* section01 */
+.title {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  width: 500px;
+  text-indent: -9999px;
+}
+
+.contact {
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  text-align: right;
+}
+
+.contact > strong {
+  font-size: 21px;
+}
+
+.contact > p {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+}
+
+/* section03 */
+#page03 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page03 h2 {
+  font-size: 32px;
+}
+
+#page03 p {
+  display: flex;
+  font-size: 18px;
+}
+
+/* 포트폴리오 공통 */
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents_wrap {
+  width: 238px;
+}
+
+.contents.vertical {
+  align-items: initial;
+}
+
+.contents_wrap.vertical {
+  padding-top: 30px;
+}
+
+.landing {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.tit {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.238;
+  letter-spacing: -0.025rem;
+}
+
+.desc {
+  font-size: 13px;
+  margin-bottom: 26px;
+}
+
+.desc_list {
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.desc_list:last-child {
+  margin-bottom: 0;
+}
+
+.desc_tit {
+  width: 49px;
+  margin-right: 25px;
+  font-weight: 500;
+}
+
+.desc p:not(.desc_tit) {
+  font-weight: 300;
+  letter-spacing: 0.025rem;
+}
+
+.color {
+  margin-bottom: 15px;
+}
+
+.color_tit {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.colorlist li {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.colorlist li:last-child {
+  margin-right: 0;
+}
+
+.detail {
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.portfolio_link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 107px;
+  height: 30px;
+  margin-right: 15px;
+  font-size: 13px;
+  border-radius: 2px;
+  transition-duration: 0.5s;
+}
+
+.portfolio_link:last-child {
+  margin-right: 0;
+}
+
+.portfolio_link:hover a {
+  color: #ffffff;
+}
+
+.number {
+  display: block;
+  font: 900 150px/1 "Haettenschweiler";
+  letter-spacing: 1rem;
+}
+
+/* section04 */
+#page04 {
+  display: flex;
+  color: #051a2d;
+}
+
+#page04 .contents {
+  width: 448px;
+  background-color: #ffffff;
+}
+
+.hangang {
+  color: #215a9d;
+}
+
+.hangang a {
+  color: #051a2d;
+}
+
+.color01.hangang {
+  background-color: #e7efff;
+}
+
+.color02.hangang {
+  background-color: #a0c5e4;
+}
+
+.color03.hangang {
+  background-color: #215a9d;
+}
+
+.color04.hangang {
+  background-color: #0f3a70;
+}
+
+.portfolio_link.hangang {
+  border: 0.5px solid #051a2d;
+}
+
+.portfolio_link.hangang:hover {
+  background-color: #215a9d;
+  border-color: #215a9d;
+}
+
+.bag.hangang {
+  position: relative;
+  width: 674px;
+  height: 100%;
+  background-color: #f0f7fc;
+}
+
+.number.hangang {
+  position: absolute;
+  width: 148px;
+  bottom: -50px;
+  right: -17px;
+}
+
+#mockup01 {
+  position: absolute;
+  top: 50%;
+  left: -58px;
+  transform: translateY(-47%);
+  width: 620px;
+}
+
+/* section05 */
+#page05 {
+  color: #594b3e;
+}
+
+#page05 .contents {
+  position: relative;
+  width: 100%;
+  height: 317px;
+  background-color: #ffffff;
+}
+
+#page05 .contents_wrap.vertical:first-of-type {
+  margin: 0 50px 0 100px;
+}
+
+.hermes {
+  color: #ff895a;
+}
+
+.hermes a {
+  color: #594b3e;
+}
+
+.color01.hermes {
+  background-color: #fffaf7;
+}
+
+.color02.hermes {
+  background-color: #f6f1eb;
+}
+
+.color03.hermes {
+  background-color: #f1eee5;
+}
+
+.color04.hermes {
+  background-color: #eff8fd;
+}
+
+.portfolio_link.hermes {
+  border: 0.5px solid #594b3e;
+}
+
+.portfolio_link.hermes:hover {
+  background-color: #ff895a;
+  border-color: #ff895a;
+}
+
+.bag.hermes {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #fff7f3;
+}
+
+.number.hermes {
+  position: absolute;
+  width: 170px;
+  top: -22px;
+  left: -3px;
+}
+
+.logo.hermes {
+  width: 100px;
+  position: absolute;
+  left: 115px;
+  bottom: 50%;
+  transform: translateY(40%);
+}
+
+#mockup02 {
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-37%);
+  width: 880px;
+}
+
+/* section06 */
+#page06 {
+  color: #07301a;
+}
+
+#page06 .contents {
+  position: relative;
+  justify-content: flex-end;
+  width: 100%;
+  height: 317px;
+  background-color: #ffffff;
+}
+
+#page06 .contents_wrap.vertical {
+  margin-right: 60px;
+}
+
+.salady {
+  color: #427e5e;
+}
+
+.salady a {
+  color: #07301a;
+}
+
+.color01.salady {
+  background-color: #c4e1c3;
+}
+
+.color02.salady {
+  background-color: #6dba94;
+}
+
+.color03.salady {
+  background-color: #359869;
+}
+
+.color04.salady {
+  background-color: #34644a;
+}
+
+.portfolio_link.salady {
+  border: 0.5px solid #07301a;
+}
+
+.portfolio_link.salady:hover {
+  background-color: #427e5e;
+  border-color: #427e5e;
+}
+
+.bag.salady {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 476px;
+  background-color: #eef0eb;
+}
+
+.number.salady {
+  position: absolute;
+  width: 170px;
+  bottom: -48px;
+  left: -3px;
+}
+
+.logo.salady {
+  width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo.salady img {
+  width: 100px;
+}
+
+#mockup03 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 725px;
+}
+
+/* section07 */
+#page07 {
+  display: flex;
+  color: #333333;
+  background: linear-gradient(#ffffff 20%, #f9f5f2 20%);
+}
+
+#page07 .contents {
+  width: 410px;
+}
+
+#page07 .contents_wrap {
+  margin-top: 158px;
+}
+
+.odumak {
+  color: #865c35;
+}
+
+.odumak a {
+  color: #333333;
+}
+
+.color01.odumak {
+  background-color: #c99a6e;
+}
+
+.color02.odumak {
+  background-color: #865c35;
+}
+
+.color03.odumak {
+  background-color: #503924;
+}
+
+.color04.odumak {
+  background-color: #333333;
+}
+
+.portfolio_link.odumak {
+  border: 0.5px solid #333333;
+}
+
+.portfolio_link.odumak:hover {
+  background-color: #865c35;
+  border-color: #865c35;
+}
+
+.bag.odumak {
+  position: relative;
+  width: 712px;
+  height: 100%;
+}
+
+.number.odumak {
+  position: absolute;
+  width: 180px;
+  top: -21px;
+  right: -14px;
+}
+
+#mockup04 {
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-34%);
+  width: 800px;
+}
+
+/* section 08 */
+.title.last {
+  width: 440px;
+}
