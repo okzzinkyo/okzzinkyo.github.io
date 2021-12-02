@@ -1,5 +1,3 @@
-// import addressMap from "./sigugun"
-
 $(window).ready(function(){
   // header 배경색 적용
   function header_bg (){
