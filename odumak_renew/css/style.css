@@ -66,6 +66,7 @@ header {
 /* header End */
 
 #section01 {
+  position: relative;
   height: 930px;
   background-color: #000000;
 }
@@ -76,27 +77,37 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.7;
-  background-image: url(../images/rustic_2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.slide_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 2s;
+}
+
+.slide_img[data-index="0"] {
+  opacity: 0.6;
 }
 
 #section01 > .container {
   position: relative;
 }
 
-#section01_title {
+#section01_txt {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-30%);
+  animation: Titlemove 1s 0.5s forwards;
+  opacity: 0;
+}
+
+#section01_title {
   color: #ffffff;
   border-left: 16px solid #c19f78;
   padding-left: 40px;
-  opacity: 0;
-  animation: Titlemove 1s 0.5s forwards;
 }
 
 #section01_title > h2 {
@@ -110,13 +121,53 @@ header {
   font: 16px/24px "Times New Roman";
 }
 
+#slide_notice {
+  display: flex;
+  justify-content: space-between;
+  width: 216px;
+  height: 60px;
+  padding: 80px 0 0 56px;
+  color: #ffffff;
+}
+
+#page_number {
+  font-size: 48px;
+  color: #c19f78;
+}
+
+#all_pages::before {
+  display: inline-block;
+  content: "";
+  position: relative;
+  top: 2px;
+  width: 1px;
+  height: 16px;
+  margin: 0 5px;
+  background-color: #ffffff;
+  transform: rotateZ(24deg);
+}
+
+#slide_pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 93px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.pagination {
+  cursor: pointer;
+}
+
 @keyframes Titlemove {
   0% {
     transform: translateY(-30%);
     opacity: 0;
   }
   100% {
-    transform: translateY(-55%);
+    transform: translateY(-50%);
     opacity: 1;
   }
 }

@@ -1,5 +1,48 @@
 $(document).ready(function(){
   
+
+  $("#section01_slide > li").each(function(index){
+    $(this).attr("data-index", index);
+  });
+
+  var pages = $("#page_number");
+  i = 0;
+  $("#right").click(function(){  
+    i++;
+    if(i>2){
+      i=0;
+    }
+    $("#section01_slide > li[data-index^='"+i+"']").css({
+      opacity:0.7
+    });
+    
+    $("#section01_slide > li[data-index!='"+i+"']").css({
+      opacity:0
+    });
+
+    pages.html("0"+[i+1]);
+  });
+
+  $("#left").click(function(){
+    i--;
+    if(i<0){
+      i=2;
+    }
+    $(".slide_img[data-index^='"+i+"']").css({
+      opacity:0.7
+    });
+    
+    $(".slide_img[data-index!='"+i+"']").css({
+      opacity:0
+    });
+  });
+
+  setInterval( function(){
+    $("#right").trigger("click");
+  },5000)
+  
+
+ 
   /* Reservation jquery */
   // Theam 지정
   $('#thema').change(function(){
