@@ -255,6 +255,7 @@
 
   #brewery_desc {
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 80px;
   }
 
@@ -305,6 +306,10 @@
   }
 
   /* section04 news */
+  #news {
+    padding: 100px 0;
+  }
+
   #news .titleBox {
     margin-right: 55px;
   }
@@ -317,6 +322,21 @@
 
   #news_item {
     width: 100%;
+  }
+
+  #btn_news {
+    width: 153px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  #btn_news::after {
+    font-size: 11px;
+    line-height: 40px;
+  }
+
+  #btn_news::before {
+    width: 40px;
   }
 
   .news {
@@ -334,6 +354,10 @@
 
   .news:nth-child(2n + 1) {
     margin-top: 0;
+  }
+
+  .news_img:first-child {
+    margin-bottom: 25px;
   }
 
   .news_desc > p {
