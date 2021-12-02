@@ -44,7 +44,6 @@ section {
 
 #page02 {
   padding: 80px 80px 100px 100px;
-  box-sizing: border-box;
 }
 
 /* section03 */
@@ -57,11 +56,17 @@ section {
 
 #page03 h2 {
   font-size: 32px;
+  margin-bottom: 15px;
 }
 
 #page03 p {
   display: flex;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+#page03 p:hover a {
+  background-color: rgba(255, 223, 155, 0.692);
+  color: saddlebrown;
 }
 
 /* 포트폴리오 공통 */
