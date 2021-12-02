@@ -253,6 +253,7 @@
 
   #foodMenu {
     position: relative;
+    max-width: 508px;
     top: 65px;
     opacity: 0;
     width: 100%;
@@ -260,6 +261,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 auto;
   }
 
   .foodMenu_item {
@@ -270,7 +272,6 @@
     align-items: center;
     margin-bottom: 10px;
     flex-shrink: 0;
-    font: 500 16px "Ubuntu";
     color: #09753c;
     background-color: #f9fbf8;
     border-radius: 10px;
@@ -313,6 +314,10 @@
 
   .foodMenu_item:nth-child(6) img {
     width: 83px;
+  }
+
+  .foodMenu_item > h3 {
+    font: 500 15px "Ubuntu";
   }
 
   .foodMenu_item.selected h3 {
@@ -535,12 +540,6 @@
   /* section03 End */
 
   /* section04 */
-
-  /* #section04{
-    background-image: url(../images/main/App.png);
-    background-repeat: no-repeat;
-    background-size: 30% ;
-  } */
   #section04 > .container {
     padding: 140px 0;
   }

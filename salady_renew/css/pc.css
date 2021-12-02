@@ -416,10 +416,6 @@
     font-size: 18px;
   }
 
-  /* .step{
-    position: relative;
-  } */
-
   .circle {
     position: relative;
     top: 100px;
@@ -499,15 +495,14 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    /* align-items: center; */
     margin: 0 auto;
   }
 
   #section04_img {
     width: 415px;
     position: absolute;
-    left: -30px;
-    top: -75px;
+    left: 0;
+    top: -115px;
   }
 
   #section04_img img {
@@ -518,7 +513,6 @@
   #benefit_wrap {
     width: 64.516%;
     /* 800px */
-    height: 340px;
   }
 
   .benefit {
@@ -722,7 +716,7 @@
   }
 
   .navigation {
-    display: none;
+    opacity: 0;
   }
   /* article End */
 
