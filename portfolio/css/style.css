@@ -1,16 +1,19 @@
 /* 공통 */
 section {
   position: relative;
-  width: 1122px;
+  width: 100%;
   height: 793px;
-  margin: 25px auto;
+  margin: 25px 0;
   background-color: #ffffff;
   background-image: url(../images/bg.png);
   background-size: cover;
+  overflow: hidden;
 }
 
 #wrap {
-  width: 100%;
+  width: 1122px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
 /* section01 */
@@ -44,6 +47,7 @@ section {
 
 #page02 {
   padding: 80px 80px 100px 100px;
+  box-sizing: border-box;
 }
 
 /* section03 */
