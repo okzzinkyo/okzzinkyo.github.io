@@ -285,14 +285,11 @@ $(document).ready(function(){
       $("#find_city").change(function(){
           var city = $(this).val();
           var citykey = addressMap[city];
+          $("#find_boroug").html('')
           for( var i = 0; i<citykey.length; i++){
             $("#find_boroug>option[value='전체']").remove();
             $("#find_boroug").append("<option value='"+citykey[i]+"'>"+citykey[i]+"</option>")
           }
-
-            // var select = document.getElementByI("find_boroug");
-            // var Opt = document.createElement("option");
-            // select.appendChild(Opt);
 
         });
         $("#find_btn").click(function(){
