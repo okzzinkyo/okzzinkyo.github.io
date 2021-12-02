@@ -40,6 +40,13 @@ section {
   letter-spacing: 0.1rem;
 }
 
+/* section02 */
+
+#page02 {
+  padding: 80px 80px 100px 100px;
+  box-sizing: border-box;
+}
+
 /* section03 */
 #page03 {
   display: flex;
