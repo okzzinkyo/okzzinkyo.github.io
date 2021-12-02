@@ -328,6 +328,10 @@
     color: #cac9c9;
   }
 
+  .news_desc.main {
+    padding: 15.625% 9.375%;
+  }
+
   /* section05 contact */
 
   #contact .titleBox {

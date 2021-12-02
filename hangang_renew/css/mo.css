@@ -1,4 +1,4 @@
-@media all and (max-width: 320px) {
+@media all and (max-width: 368px) {
   /* 공통 */
   .titleBox {
     margin-bottom: 70px;
@@ -101,10 +101,6 @@
 
   /* section04 news */
 
-  .news_desc.main {
-    padding: 15.625% 9.375%;
-  }
-
   .news_desc > h3 {
     font-size: 18px;
     margin-bottom: 25px;
@@ -114,15 +110,15 @@
     font-size: 14px;
     line-height: 1.7;
     font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  .news_desc > p:last-of-type {
     margin-bottom: 30px;
   }
 
   .more_btn {
     font-size: 14px;
+  }
+
+  .news_desc_more {
+    display: none;
   }
 
   /* section05 contact */
