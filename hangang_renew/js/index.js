@@ -63,38 +63,37 @@ $(document).ready(function(){
     }
   })
 
+  var m_menu_hide = function(){
+    $("#m_menu").slideUp().removeClass("show");
+    $("#shadow").hide();
+  }
+  var m_menu_show = function(){
+    $("#shadow").show();
+    $("#m_menu").slideDown().addClass("show");
+  }
+
   //side btn click menu bar show
   $("#side_btn").click(function(){
     if($("#m_menu").hasClass("show") == false){
-      $("#m_menu").slideDown().addClass("show");
+      m_menu_show();
       header();
     }else if($("#m_menu").hasClass("show") == true){
-      $("#m_menu").slideUp().removeClass("show");
+      m_menu_hide();
       if($("header").removeClass("bag") == false){
         headerOut();
       }
     }
-    
   });
 
-  // var Ww = $(window).width();
-  // function gompeo(){
-  //   if(Ww < 800 ){
-  //     $("#slide01_img03 > img").attr(
-  //       "src","images/main/naru/m_naru_img03.png"
-  //     );
-  //   } else{
-  //     $("#slide01_img03 > img").attr(
-  //       "src","images/main/naru/naru_img03.png"
-  //     );
-  //   }
-  // } 
-  // gompeo();
+  $("#shadow").click(function(){
+    m_menu_hide();
+  })
 
-  // $(window).resize(function(){
-  //   Ww = $(window).width();
-  //   gompeo();
-  // });
+  // menu bar Click menu hide
+  $("#m_menu").click(function(){
+    m_menu_hide();
+    console.log("된거야???")
+  });
 
         // // submit 유효성 체크!!
         // var is_name = 0;

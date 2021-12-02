@@ -50,7 +50,7 @@
     top: 0;
     left: 0;
     background-color: #ffffff;
-    font: 15px;
+    font-size: 15px;
     color: #c2c2c2;
     z-index: 80;
     padding: 75px 0 0 0;
@@ -72,9 +72,21 @@
   .m_menu_item a {
     display: block;
     margin: 0;
-    line-height: 90px;
+    line-height: 80px;
     text-align: center;
   }
+
+  #shadow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 70;
+    background-color: #505d6850;
+  }
+
   /* section main */
   #main_img {
     width: 60.6%;
