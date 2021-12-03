@@ -1,5 +1,42 @@
-@media all and (max-width: 1130px) {
+@media all and (max-width: 500px) {
+  /* 공통 CSS */
   html {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .title {
+    font-size: 2.15rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  #textMen br.mo {
+    display: none;
+  }
+
+  #part01_silk_img01 {
+    margin-bottom: 70%;
+  }
+
+  .textSilk {
+    width: 100%;
+  }
+
+  .textSilk span {
+    display: none;
+  }
+
+  #perfume_img01 {
+    transform: translateY(55%);
+    width: 80%;
+  }
+
+  #textPerfume span {
+    font-size: 1.5rem;
+  }
+
+  #desc01 p > br:not(.mo) {
+    display: none;
   }
 }

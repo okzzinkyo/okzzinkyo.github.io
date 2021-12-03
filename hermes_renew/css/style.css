@@ -33,7 +33,7 @@ section {
 
 .title {
   font-family: "GmarketSansMedium";
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 
 .subtitle {
@@ -55,7 +55,7 @@ section {
 
 .btn > a {
   display: block;
-  padding: 0.9375rem 3.125rem;
+  padding: 0.9375rem 2.125rem;
 }
 /* 공통 CSS End */
 
@@ -176,38 +176,31 @@ header {
   align-items: center;
 }
 
-#textMen .title {
-  margin-bottom: 1.571rem;
-  /* 22px; */
-}
-
-#textMen .bar {
-  background-color: #49463e;
-  margin-bottom: 2.5rem;
-  /* 35px */
-}
-
 #textMen p:nth-of-type(1) {
-  font-size: 1.125rem;
+  font-size: 0.8rem;
   margin-bottom: 3px;
 }
 
 #textMen p:nth-of-type(2) {
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #6a665a;
+}
+
+#textMen .bar {
+  margin: 1.5625rem 0;
+  background-color: #6a665a;
 }
 
 .part01_men_img {
   position: absolute;
   width: 28.177%;
   /* 541px */
-  right: 15.625%;
-  /* 300px */
 }
 
 .part01_men_img:first-of-type {
   top: -3.125%;
+  right: 15.625%;
   /* 60px */
 }
 
@@ -255,11 +248,11 @@ header {
 }
 
 #item_text h3 {
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 #item_text p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 0.822%;
 }
 
@@ -347,7 +340,7 @@ header {
 
 .textSilk .bar {
   background-color: #ec6707;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4.44%;
 }
 
 #textSilk01 {
@@ -395,17 +388,18 @@ header {
 /* secion04 perfume*/
 #perfume {
   background-color: #ffffff;
+  padding: 0 0 200px;
 }
 
 #Perfume_part01 {
   position: relative;
-  height: 37.5vw;
-  max-height: 720px;
+  padding: 200px 0;
   background-color: #eef8fd;
   background-image: url(../images/main/perfume/perfume02_1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+  box-sizing: content-box;
 }
 
 #Perfume_part01 > .in_container {
@@ -426,6 +420,10 @@ header {
   font-size: 2rem;
 }
 
+#textPerfume span > br {
+  display: none;
+}
+
 #textPerfume .bar {
   background-color: #223b48;
   margin-bottom: 1.4875rem;
@@ -433,9 +431,13 @@ header {
 
 #textPerfume > p {
   color: #568095;
-  font-size: 1.125rem;
-  width: 25.3rem;
+  font-size: 1rem;
+  width: 53%;
   line-height: 1.875;
+}
+
+#textPerfume br.mo {
+  display: none;
 }
 
 #textPerfume .btn {
@@ -465,6 +467,7 @@ header {
 }
 
 .desc {
+  display: flex;
   width: 100%;
   overflow: hidden;
 }
@@ -488,7 +491,12 @@ header {
   line-height: 1.5;
 }
 
+.textPerfume02 h3 br {
+  display: none;
+}
+
 #desc02 {
+  flex-direction: row-reverse;
   margin-top: -14.803%;
   /* -270px */
 }
@@ -503,9 +511,12 @@ header {
   /* 260px */
 }
 
+#desc01 p > br.mo {
+  display: none;
+}
+
 #desc02 > .textPerfume02 {
-  margin-top: 26.3%;
-  /* 425px */
+  margin: 26.3% 8% 0 0;
 }
 
 #desc03 > .textPerfume02 {
@@ -517,10 +528,6 @@ header {
   width: 45.95%;
   /* 761px */
   float: left;
-}
-
-#part02_perfume_img02 {
-  float: right;
 }
 
 #part02_perfume_img03 {

@@ -1,0 +1,214 @@
+@media all and (max-width: 698px) {
+  /* 공통 CSS */
+  html {
+    font-size: 14px;
+  }
+
+  .container,
+  #in_header,
+  .in_container,
+  #in_footer {
+    width: 90%;
+  }
+
+  .btn > a {
+    display: block;
+    padding: 0.9375rem 1.5rem;
+  }
+
+  /* section02 */
+  #men_part01 {
+    height: 100%;
+    max-height: none;
+    padding: 90px 0;
+    box-sizing: content-box;
+  }
+
+  #men_part01 .in_container {
+    padding: 0;
+  }
+
+  #part01_men_wrap {
+    padding: 65px 0;
+  }
+  /* 
+  #textMen p:nth-of-type(2) br {
+    display: none;
+  } */
+
+  .part01_men_img {
+    position: absolute;
+    width: 65%;
+  }
+
+  #menTag {
+    display: none;
+  }
+
+  #men_part02 {
+    margin-top: 50%;
+  }
+
+  #part02_men_img01 {
+    display: none;
+  }
+
+  #men_item_wrap {
+    width: 100%;
+  }
+
+  #item_text {
+    margin-bottom: 11.46%;
+  }
+
+  /* section03 silk */
+
+  #Silk_title {
+    text-align: center;
+    margin-bottom: 8%;
+  }
+
+  #silk_item01_wrap {
+    width: 100%;
+  }
+
+  .silk_item01 {
+    float: right;
+  }
+
+  .silk_item01:first-child {
+    margin-right: 0;
+  }
+
+  #part01_silk_img03 {
+    display: none;
+  }
+
+  .textSilk .bar {
+    margin-bottom: 7%;
+  }
+
+  #textSilk01 {
+    margin: 17.77% 0 0;
+  }
+
+  #Silk_part02 {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 2.5%;
+    margin-bottom: 0;
+  }
+
+  #textSilk02 {
+    width: 65.22%;
+    margin-top: 8.36%;
+  }
+
+  #silk_item02_wrap {
+    width: 100%;
+  }
+
+  #change {
+    width: 74.5%;
+  }
+
+  /* secion04 perfume*/
+
+  #textPerfume {
+    width: 100%;
+  }
+
+  #textPerfume span {
+    font-size: 1.8rem;
+  }
+
+  #textPerfume > p {
+    width: 100%;
+  }
+
+  #textPerfume br.mo {
+    display: block;
+  }
+
+  #textPerfume > .btn > a {
+    padding: 0.9375rem 3.125rem;
+  }
+
+  #perfume_img01 {
+    transform: translateY(50%);
+  }
+
+  #Perfume_part02 > .container {
+    padding: 0 4.385%;
+  }
+
+  .desc {
+    flex-direction: column-reverse;
+    margin-bottom: 90px;
+  }
+
+  .desc:last-child {
+    margin-bottom: 0;
+  }
+
+  .textPerfume02 {
+    width: 100%;
+    margin: 0 0 40px;
+    float: unset;
+  }
+
+  .textPerfume02 h3 {
+    font-size: 1.71rem;
+  }
+
+  .textPerfume02 p {
+    font-size: 1.07rem;
+  }
+
+  .textPerfume02 h3 br {
+    display: none;
+  }
+
+  #desc01 > .textPerfume02 {
+    margin-top: 0;
+  }
+
+  #desc01 p > br.mo {
+    display: none;
+  }
+
+  #desc01 p > br:not(.mo) {
+    display: block;
+  }
+
+  #desc02 {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+
+  #desc02 > .textPerfume02 {
+    margin: 0 0 40px;
+  }
+
+  #desc02 p > br.mo {
+    display: none;
+  }
+
+  #desc03 {
+    margin-top: 0;
+  }
+
+  #desc03 > .textPerfume02 {
+    margin: 0 0 40px;
+  }
+
+  .perfume_img02 {
+    width: 100%;
+    float: unset;
+  }
+
+  #part02_perfume_img03 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
