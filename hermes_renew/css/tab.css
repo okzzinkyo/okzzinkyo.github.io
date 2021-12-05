@@ -58,17 +58,15 @@
   }
 
   #img_big {
-    width: auto;
-    height: 100%;
+    width: 100%;
   }
 
   #img_big img {
-    width: auto;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%) scale(1.25);
   }
 
   #img01 {

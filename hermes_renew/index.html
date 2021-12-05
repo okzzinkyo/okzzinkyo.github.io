@@ -27,18 +27,6 @@
     <link rel="stylesheet" href="css/note.css" />
     <link rel="stylesheet" href="css/mo.css" />
     <link rel="stylesheet" href="css/animation.css" />
-    <!-- jquery CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <!-- jquery UI CDN -->
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div id="wrap">
@@ -48,7 +36,13 @@
           <h2 id="logo">
             <a><img src="images/header/hermes-logo.png" alt="" /></a>
           </h2>
-          <div id="menu_bar"><i class="fas fa-bars"></i></div>
+          <div
+            id="menu_bar"
+            onclick="alert('menu 더보기 버튼을 누르셨습니다.');
+          "
+          >
+            <i class="fas fa-bars"></i>
+          </div>
           <ul id="menu">
             <li></li>
             <li></li>
@@ -304,10 +298,19 @@
       </footer>
     </div>
     <script>
+      // 모바일 버전 메인 이미지 변경
       var ww = window.innerWidth;
       var big_img = document.querySelector("#img_big>img");
       if (ww <= 900) {
         big_img.setAttribute("src", "images/header/img03.jpg");
+      } else {
+        big_img.setAttribute("src", "images/header/img01.jpg");
+      }
+
+      // 메뉴 슬라이드 효과 alert로 대체
+      var btn_menu = document.querySelector("#menu_bar");
+      function menu() {
+        btn_menu.click();
       }
     </script>
   </body>

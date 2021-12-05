@@ -116,7 +116,7 @@ header {
   right: 13.54%;
   bottom: 6.61%;
   padding: 2.76% 3.23%;
-  /* padding: 53px 62px; */
+  /* 53px 62px; */
   background-color: #ffffff;
   text-align: center;
   box-shadow: 26px 26px 59px 4px #00000010;
@@ -141,7 +141,6 @@ header {
 
 #img_big {
   width: 51.98%;
-  background-image: url(../images/header/img01.jpg);
 }
 
 #img01 {

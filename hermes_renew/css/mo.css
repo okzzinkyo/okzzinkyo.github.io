@@ -16,6 +16,12 @@
   }
 
   /* section01  */
+  #img_big img {
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   #textHome {
     padding: 3.76% 2.5%;
   }
