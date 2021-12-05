@@ -11,6 +11,10 @@
     font-size: 1rem;
   }
 
+  section {
+    padding: 100px 0;
+  }
+
   /* section01  */
   #textHome {
     padding: 3.76% 2.5%;
@@ -94,6 +98,14 @@
   }
 
   /* section Perfume */
+  #perfume {
+    padding: 0 0 100px;
+  }
+
+  #Perfume_part01 {
+    padding: 100px 0;
+  }
+
   #perfume_img01 {
     transform: translateY(55%);
     width: 80%;
