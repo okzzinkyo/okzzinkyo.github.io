@@ -36,6 +36,11 @@
     width: 90%;
   }
 
+  /* header */
+  #menu_bar {
+    right: 5%;
+  }
+
   /* section01  */
   #home {
     padding: 0;

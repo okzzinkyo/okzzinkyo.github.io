@@ -304,8 +304,11 @@
       </footer>
     </div>
     <script>
+      var ww = window.innerWidth;
       var big_img = document.querySelector("#img_big>img");
-      big_img.setAttribute("src", "images/header/img03.jpg");
+      if (ww <= 900) {
+        big_img.setAttribute("src", "images/header/img03.jpg");
+      }
     </script>
   </body>
 </html>

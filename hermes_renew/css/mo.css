@@ -152,7 +152,7 @@
   }
 
   #textPerfume span > br {
-    display: none;
+    display: block;
   }
 
   #Perfume_part02 {
