@@ -4,16 +4,33 @@
     font-size: 14px;
   }
 
-  .container,
-  #in_header,
-  .in_container,
-  #in_footer {
-    width: 90%;
-  }
-
   .btn > a {
     display: block;
     padding: 0.9375rem 1.5rem;
+  }
+
+  /* header */
+  #in_header {
+    height: 60px;
+  }
+
+  /* section01  */
+  #textHome {
+    padding: 3.76% 3.23%;
+  }
+
+  #textHome .title {
+    margin-bottom: 0.625rem;
+    font-size: 1.85rem;
+  }
+
+  #textHome .subtitle {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+  }
+
+  #textHome .date {
+    font-size: 1rem;
   }
 
   /* section02 */
@@ -31,14 +48,9 @@
   #part01_men_wrap {
     padding: 65px 0;
   }
-  /* 
-  #textMen p:nth-of-type(2) br {
-    display: none;
-  } */
 
   .part01_men_img {
-    position: absolute;
-    width: 65%;
+    width: 60%;
   }
 
   #menTag {
@@ -68,18 +80,6 @@
     margin-bottom: 8%;
   }
 
-  #silk_item01_wrap {
-    width: 100%;
-  }
-
-  .silk_item01 {
-    float: right;
-  }
-
-  .silk_item01:first-child {
-    margin-right: 0;
-  }
-
   #part01_silk_img03 {
     display: none;
   }
@@ -88,24 +88,8 @@
     margin-bottom: 7%;
   }
 
-  #textSilk01 {
-    margin: 17.77% 0 0;
-  }
-
-  #Silk_part02 {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 0 2.5%;
-    margin-bottom: 0;
-  }
-
-  #textSilk02 {
-    width: 65.22%;
-    margin-top: 8.36%;
-  }
-
-  #silk_item02_wrap {
-    width: 100%;
+  #textSilk01 span {
+    display: none;
   }
 
   #change {
@@ -210,5 +194,31 @@
   #part02_perfume_img03 {
     width: 100%;
     margin-left: 0;
+  }
+
+  /* footer */
+  footer {
+    padding: 64px 0;
+  }
+
+  #in_footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #copyright {
+    margin-bottom: 64px;
+  }
+
+  #footer_icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer_logo {
+    margin: 0;
   }
 }

@@ -1,6 +1,7 @@
 /* 공통 CSS */
 #wrap {
   max-width: 1920px;
+  min-width: 320px;
   height: 100%;
   position: relative;
   color: #444444;
@@ -11,8 +12,10 @@ header,
 section,
 footer {
   width: 100%;
-  height: 100%;
+  max-width: 1920px;
+  min-width: 320px;
   position: relative;
+  overflow: hidden;
 }
 
 section {
@@ -61,7 +64,10 @@ section {
 
 /* header */
 header {
+  position: fixed;
   background-color: #ffffff;
+  z-index: 9999;
+  box-shadow: 0px 0px 15px #e8e2df;
 }
 
 #in_header {
@@ -96,7 +102,7 @@ header {
 
 /* section01  */
 #home {
-  padding: 0;
+  padding: 70px 0 0 0;
   background-color: #fffaf7;
 }
 
@@ -119,7 +125,7 @@ header {
 
 #textHome .title {
   margin-bottom: 0.625rem;
-  font-size: 2.625rem;
+  font-size: 2.425rem;
   /* 42px */
 }
 
@@ -135,6 +141,7 @@ header {
 
 #img_big {
   width: 51.98%;
+  background-image: url(../images/header/img01.jpg);
 }
 
 #img01 {
@@ -358,9 +365,8 @@ header {
 }
 
 #textSilk02 {
-  width: 29.105%;
-  margin-top: 4.36%;
-  /* 116px; */
+  width: 32%;
+  margin: 4.36% 0 4.36%;
 }
 
 #silk_item02_wrap {
@@ -552,6 +558,10 @@ footer {
   line-height: 2.4;
   font-weight: 300;
   color: #9e968b;
+}
+
+#copyright > br.mo {
+  display: none;
 }
 
 #footer_logo {

@@ -6,7 +6,8 @@ section {
   margin: 25px 0;
   background-color: #ffffff;
   background-image: url(../images/bg.png);
-  background-size: cover;
+  background-size: 101%;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 

@@ -1,4 +1,4 @@
-@media all and (max-width: 500px) {
+@media all and (max-width: 520px) {
   /* 공통 CSS */
   html {
     font-size: 14px;
@@ -11,25 +11,96 @@
     font-size: 1rem;
   }
 
+  /* section01  */
+  #textHome {
+    padding: 3.76% 2.5%;
+  }
+
+  #textHome .title {
+    font-size: 1.65rem;
+  }
+
+  /* section Men */
+  .part01_men_img {
+    width: 65%;
+  }
+
+  .item_img {
+    width: 100%;
+  }
+
+  .item_img:last-child {
+    display: none;
+  }
+
   #textMen br.mo {
     display: none;
   }
 
+  /* section Silk */
+  #Silk {
+    overflow: hidden;
+  }
+
   #part01_silk_img01 {
-    margin-bottom: 70%;
+    display: none;
+  }
+
+  .silk_item01 {
+    float: none;
+  }
+  #silk_item01_wrap {
+    position: static;
+  }
+
+  .silk_item01 {
+    width: 100%;
   }
 
   .textSilk {
     width: 100%;
   }
 
-  .textSilk span {
+  #textSilk01 {
+    margin: 15% 0 18.92%;
+  }
+
+  #Silk_part02 {
+    padding: 0;
+  }
+
+  #textSilk02 {
+    width: 78%;
+    margin-top: 15%;
+  }
+
+  #textSilk02 span {
     display: none;
   }
 
+  #silk_item02_wrap {
+    width: 112%;
+    transform: translateX(-5%);
+  }
+
+  .silk_item02 {
+    width: 48.8%;
+  }
+
+  #change {
+    width: 100%;
+    right: -44%;
+    bottom: 30%;
+  }
+
+  /* section Perfume */
   #perfume_img01 {
     transform: translateY(55%);
     width: 80%;
+  }
+
+  #Perfume_part02 > .container {
+    padding: 0;
   }
 
   #textPerfume span {
@@ -38,5 +109,72 @@
 
   #desc01 p > br:not(.mo) {
     display: none;
+  }
+}
+
+@media all and (max-width: 440px) {
+  /* 공통 */
+  .title {
+    font-size: 1.997rem;
+  }
+
+  /* section01  */
+
+  #textHome .title {
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+  }
+
+  #textHome .subtitle {
+    margin-bottom: 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  #textHome .date {
+    font-size: 0.85rem;
+  }
+
+  /* section04 perfume */
+  #perfume_img01 {
+    width: 100%;
+  }
+
+  #Perfume_part02 {
+    margin-top: 55%;
+  }
+
+  #Perfume_part02 > .container {
+    padding: 0;
+  }
+
+  #textPerfume p > br,
+  #textPerfume br.mo,
+  #desc02 p > br {
+    display: none;
+  }
+
+  /* footer */
+  footer {
+    padding: 56px 0;
+  }
+
+  #in_footer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #copyright > br.mo {
+    display: block;
+  }
+
+  #footer_icon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #footer_logo {
+    margin: 0 0 20px;
   }
 }
