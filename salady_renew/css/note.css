@@ -1,3 +1,88 @@
+@media all and (max-width: 1100px) and (min-width: 679px) {
+  /* section04 */
+  #section04 > .container {
+    padding: 140px 0;
+  }
+
+  #section04_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section04_img {
+    width: 37.27%;
+  }
+
+  #section04_img img {
+    margin-left: -500px;
+    opacity: 0;
+  }
+
+  .benefit {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    /* border-bottom: 1px solid #40745a; */
+  }
+
+  .benefit::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    height: 1.5px;
+    background-color: #40745a;
+  }
+
+  .benefit:last-child {
+    margin: 0;
+    padding: 0;
+  }
+  .benefit:last-child::after {
+    display: none;
+  }
+
+  .benefit h3 {
+    display: block;
+    color: #2b6147;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 11px 20px;
+  }
+
+  .benefit:nth-child(1) h3 {
+    background-image: url(../images/main/finger01.png);
+  }
+
+  .benefit:nth-child(2) h3 {
+    background-image: url(../images/main/finger02.png);
+  }
+
+  .benefit:nth-child(3) h3 {
+    background-image: url(../images/main/finger03.png);
+  }
+
+  .benefit:nth-child(4) h3 {
+    background-image: url(../images/main/finger04.png);
+  }
+
+  .benefit p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #506254;
+  }
+  /* section04 End */
+}
+
 @media all and (max-width: 960px) and (min-width: 679px) {
   /* 공통 */
   #wrap,
@@ -521,7 +606,6 @@
   }
 
   /* section03 End */
-
   /* section04 */
   #section04 > .container {
     padding: 140px 0;
@@ -530,81 +614,10 @@
   #section04_wrap {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
-
-  #section04_img {
-    width: 230px;
-  }
-
-  #section04_img img {
-    margin-left: -500px;
-    opacity: 0;
-  }
-
-  .benefit {
-    position: relative;
-    width: 100%;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    /* border-bottom: 1px solid #40745a; */
-  }
-
-  .benefit::after {
-    display: block;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 250px;
-    height: 1.5px;
-    background-color: #40745a;
-  }
-
-  .benefit:last-child {
-    margin: 0;
-    padding: 0;
-  }
-  .benefit:last-child::after {
-    display: none;
-  }
-
-  .benefit h3 {
-    display: block;
-    color: #2b6147;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    font-size: 18px;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 11px 20px;
-  }
-
-  .benefit:nth-child(1) h3 {
-    background-image: url(../images/main/finger01.png);
-  }
-
-  .benefit:nth-child(2) h3 {
-    background-image: url(../images/main/finger02.png);
-  }
-
-  .benefit:nth-child(3) h3 {
-    background-image: url(../images/main/finger03.png);
-  }
-
-  .benefit:nth-child(4) h3 {
-    background-image: url(../images/main/finger04.png);
-  }
-
-  .benefit p {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    color: #506254;
-  }
   /* section04 End */
-
   /* section05 */
 
   #section05 {
