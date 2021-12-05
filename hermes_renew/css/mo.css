@@ -148,7 +148,11 @@
 
   /* section04 perfume */
   #perfume_img01 {
-    width: 100%;
+    width: 90%;
+  }
+
+  #textPerfume span > br {
+    display: none;
   }
 
   #Perfume_part02 {
