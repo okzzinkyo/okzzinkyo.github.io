@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX 반응형 슬라이드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        display: block;
+        border: none;
+      }
+
+      #wrap {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: cornflowerblue;
+        color: #ffffff;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #left {
+        left: 0;
+      }
+
+      #right {
+        right: 0;
+      }
+
+      #img-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      #img-wrap > img {
+        float: left;
+      }
+
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var ww = $(window).width();
+
+        function layout() {
+          $("#wrap").css({
+            width: ww,
+            height: 0.5 * ww,
+          });
+
+          wrap_w = $("#wrap").width();
+          wrap_h = $("#wrap").height();
+
+          $(".btn").css({
+            width: 0.1 * ww,
+            height: 0.1 * ww,
+            fontSize: 0.05 * ww,
+            lineHeight: 0.1 * ww + "px",
+          });
+
+          $("#img-wrap").css({
+            width: 5 * wrap_w,
+            height: wrap_h
+          });
+
+          $("#img-wrap> img").css({
+            width: wrap_w,
+            height: wrap_h,
+          });
+        }; // layout End
+
+        layout();
+
+        //resize
+        $(window).resize(function () {
+          ww = $(window).width();
+          layout();
+        });
+
+        //animate
+        var i = 0;
+        $("#right").click(function () {
+          i++;
+          if (i > 4) {
+            i = 0;
+          }
+          $("#img-wrap").animate({
+            left: -wrap_w * i,
+          });
+        });
+
+        $("#left").click(function () {
+          i--;
+          if (i < 0) {
+            i = 4;
+          }
+          $("#img-wrap").animate({
+            left: -wrap_w * i,
+          });
+        });
+
+        setInterval(function () {
+          $("#right").trigger("click");
+        }, 1000);
+
+      }); //End
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="img-wrap">
+        <img src="img/a.png" alt="" />
+        <img src="img/b.jpg" alt="" />
+        <img src="img/c.jpg" alt="" />
+        <img src="img/d.jpg" alt="" />
+        <img src="img/e.jpg" alt="" />
+      </div>
+      <div id="left" class="btn">&lt;</div>
+      <div id="right" class="btn">&gt;</div>
+    </div>
+  </body>
+</html>
