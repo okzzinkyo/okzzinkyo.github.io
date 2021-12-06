@@ -67,11 +67,16 @@ section {
 #page03 p {
   display: flex;
   font-size: 20px;
+  margin-bottom: 100px;
 }
 
 #page03 p:hover a {
   background-color: rgba(255, 223, 155, 0.692);
   color: saddlebrown;
+}
+
+#list_img {
+  width: 70%;
 }
 
 /* 포트폴리오 공통 */
