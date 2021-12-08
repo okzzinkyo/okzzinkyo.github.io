@@ -60,6 +60,11 @@ section {
   display: block;
   padding: 0.9375rem 2.125rem;
 }
+
+.btn > a:hover {
+  background-color: rgba(139, 139, 139, 0.192);
+  border: none;
+}
 /* 공통 CSS End */
 
 /* header */
