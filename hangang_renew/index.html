@@ -572,26 +572,41 @@
               data-aos="fade-left"
               data-aos-easing="ease-in"
             >
+              <div id="ID-error"></div>
               <input id="from" type="text" placeholder="From :" required />
+              <label for="from"></label>
+              <div id="CONTACT-error"></div>
               <input
-                id="contact"
+                id="email"
                 type="email"
                 placeholder="E-mail or Phone number :"
                 required
               />
+              <label for="contact"></label>
+              <div id="TITLE-error"></div>
               <input
-                id="title"
+                id="contact_title"
                 type="text"
                 placeholder="Title :"
-                required
                 maxlength="20"
+                required
               />
+              <label for="title"></label>
+              <div id="TEXT-error"></div>
               <textarea
+                id="message"
                 placeholder="Please enter your message :"
                 required
-                required
               ></textarea>
-              <button id="send_btn" type="submit">Send message</button>
+
+              <button
+                id="send_btn"
+                type="button"
+                value="submit"
+                onclick="checkinput()"
+              >
+                Send message
+              </button>
             </form>
           </div>
         </div>
@@ -624,5 +639,135 @@
         </div>
       </footer>
     </div>
+    <script>
+      // submit 유효성 체크!!
+      var is_name = 0;
+      var is_email = 0;
+      var is_text = 0;
+      var is_title = 0;
+
+      function checkinput() {
+        var NAMEvalue = $("#from").val();
+        var CONTACTvalue = $("#email").val();
+        var TEXTvalue = $("#message").val();
+        var TITLEvalue = $("#contact_title").val();
+
+        if (NAMEvalue == "" || NAMEvalue == null) {
+          is_name = 0;
+          $("#from").addClass("error");
+          $("#ID-error").html(
+            "<span class='error-msg'>" +
+              "※ 소속단체나 성함을 적어주세요." +
+              "</span>"
+          );
+        } else {
+          is_name = 1;
+          $("#from").removeClass("error");
+          $("#ID-error").html("");
+        }
+
+        if (CONTACTvalue == "" || CONTACTvalue == null) {
+          is_email = 0;
+          $("#email").addClass("error");
+          $("#CONTACT-error").html(
+            "<span class='error-msg'>" +
+              "※ 이메일이나 핸드폰 번호를 적어주세요." +
+              "</span>"
+          );
+        } else {
+          if (isEmail(CONTACTvalue)) {
+            is_email = 1;
+            $("#email").removeClass("error");
+            $("#CONTACT-error").html("");
+          } else if (isPhone(CONTACTvalue)) {
+            is_email = 1;
+            $("#email").removeClass("error");
+            $("#CONTACT-error").html("");
+          } else {
+            is_email = 0;
+            $("#email").addClass("error");
+            $("#CONTACT-error").html(
+              "<span class='error-msg'>" +
+                "※ 010-1387-1125 또는 hangangbrewery@naver.com 형식으로 입력해주세요." +
+                "</span>"
+            );
+          }
+        }
+
+        if (TITLEvalue == "" || TITLEvalue == null) {
+          is_title = 0;
+          $("#contact_title").addClass("error");
+          $("#TITLE-error").html(
+            "<span class='error-msg'>" + "※ 제목을 입력해주세요" + "</span>"
+          );
+        } else {
+          is_text = 1;
+          $("#contact_title").removeClass("error");
+          $("#TITLE-error").html("");
+        }
+
+        if (TEXTvalue == "" || TEXTvalue == null) {
+          is_text = 0;
+          $("#message").addClass("error");
+          $("#TEXT-error").html(
+            "<span class='error-msg'>" +
+              "※ 문의하실 내용을 입력해주세요." +
+              "</span>"
+          );
+        } else {
+          is_text = 1;
+          $("#message").removeClass("error");
+          $("#TEXT-error").html("");
+        }
+
+        if (is_name == 1 && is_email == 1 && is_text == 1) {
+          $("#send_btn").submit();
+        }
+
+        // 유효성 test 후 input blur시 다시 유효성 test
+        $("#from").blur(function () {
+          checkinput();
+        });
+        $("#email").blur(function () {
+          checkinput();
+        });
+        $("#message").blur(function () {
+          checkinput();
+        });
+        $("#contact_title").blur(function () {
+          checkinput();
+        });
+
+        // inputfocus시 error 효과 지우기
+        $("#from").focus(function () {
+          $("#from").removeClass("error");
+          $("#ID-error").html("");
+        });
+        $("#email").focus(function () {
+          $("#email").removeClass("error");
+          $("#CONTACT-error").html("");
+        });
+        $("#message").focus(function () {
+          $("#message").removeClass("error");
+          $("#TEXT-error").html("");
+        });
+        $("#contact_title").focus(function () {
+          $("#contact_title").removeClass("error");
+          $("#TITLE-error").html("");
+        });
+      }
+
+      function isEmail(CONTACTvalue) {
+        var regex =
+          /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(CONTACTvalue);
+      }
+
+      function isPhone(CONTACTvalue) {
+        var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+
+        return regPhone.test(CONTACTvalue);
+      }
+    </script>
   </body>
 </html>
