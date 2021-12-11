@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font // NotoSans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>COVID Board</title>
+    <!-- jquery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>코로나 현황판</h1>
+        <button id="btn_control">
+          <i class="fas fa-sliders-h"></i>
+        </button>
+      </header>
+      <!-- header End -->
+      <main>
+        <section id="total">
+          <div class="container">
+            <div id="confirmed" class="bg">
+              <h2>전세계 확진자 수</h2>
+              <p class="number" data-info="Confirmed">1,000,000 명</p>
+              <p class="New"><span class="status">▲</span>1,000</p>
+            </div>
+            <div id="result">
+              <div id="deaths" class="bg">
+                <h2>전세계 사망자 수</h2>
+                <p class="number" data-info="Deaths">1,000 명</p>
+                <p class="New"><span class="status">▲</span>1,0</p>
+              </div>
+              <div id="recovered" class="bg">
+                <h2>전세계 회복자 수</h2>
+                <p class="number" data-info="Recovered">2,000 명</p>
+                <p class="New"><span class="status">▲</span>20</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Total End -->
+        <section id="compare">
+          <div class="container">
+            <div id="confirmed_cases" class="bg">
+              <h2>확진자 추이 비교</h2>
+              <p class="chart">(나라를 선택해주세요.)</p>
+            </div>
+            <div id="deaths_cases" class="bg">
+              <h2>사망자 추이</h2>
+              <p class="chart">(나라를 선택해주세요.)</p>
+            </div>
+            <div id="recovered_cases" class="bg">
+              <h2>회복자 추이</h2>
+              <p class="chart">(나라를 선택해주세요.)</p>
+            </div>
+          </div>
+        </section>
+        <!-- Compare End -->
+        <button id="btn_prevention">예방방법 보러가기</button>
+      </main>
+      <aside id="control_box">
+        <div class="container">
+          <h2>국가 설정</h2>
+          <form id="select">
+            <select id="countries"></select>
+            <button id="btn_select" type="button">선택</button>
+          </form>
+        </div>
+      </aside>
+      <!-- main End -->
+      <footer>
+        <p>SW Dev. Assignments - COVID Board</p>
+        <p>프론트엔드 지원자 옥진경</p>
+        <p>
+          <a href="mailto:okzzinkyo@naver.com">E-mail: okzzinkyo@naver.com</a>
+        </p>
+        <p><a href="tel:01030705773">Tel: 010.3070.5773</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
