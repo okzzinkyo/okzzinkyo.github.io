@@ -23,6 +23,18 @@ footer {
   margin: 0 auto;
 }
 
+.header_btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
 /* header */
 header {
   position: fixed;
@@ -42,16 +54,7 @@ h1 {
 }
 
 #btn_control {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   right: 5%;
-  top: 15px;
-  width: 25px;
-  height: 25px;
-  font-size: 18px;
-  background-color: #ffffff;
 }
 
 /* main 공통 */
@@ -62,19 +65,20 @@ main {
 h2 {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 17.17px;
 }
 
 .bg {
-  background-color: #f6f6f6;
-  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 155px;
   padding: 15px;
   margin: 15px 0;
+  background-color: #f6f6f6;
   border-radius: 10px;
 }
 
 .number {
-  margin-bottom: 17.17px;
   font-size: 30px;
   text-align: center;
   color: #9f9f9f;
@@ -86,14 +90,8 @@ h2 {
 }
 
 /* section - total */
-
 #confirmed.bg {
   padding: 20px;
-}
-
-#confirmed > h3,
-#confirmed > .number {
-  margin-bottom: 11.67px;
 }
 
 #result {
@@ -103,9 +101,13 @@ h2 {
   height: 100%;
 }
 
+#result > .bg {
+  margin: 0;
+}
+
 /* section - compare */
-#compare h2 {
-  margin-bottom: 5px;
+#compare .bg {
+  justify-content: initial;
 }
 
 #btn_prevention {
@@ -123,20 +125,24 @@ h2 {
   position: fixed;
   top: 55px;
   width: 320px;
-  height: 0;
+  height: 150px;
   background-color: #ffffff;
   box-shadow: 2px 0 7px #cacaca;
   overflow: hidden;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   z-index: 888;
 }
 
 aside > .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#control_box h2 {
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 #select {
@@ -153,12 +159,14 @@ aside > .container {
   padding: 12px;
   margin-right: 15px;
   border: 1px solid #cacaca;
+  border-radius: 5px;
 }
 
 #btn_select {
   width: 70px;
   height: 100%;
   flex-shrink: 0;
+  border-radius: 5px;
 }
 
 /* footer */
@@ -179,4 +187,9 @@ footer p:first-child {
 
 footer p:not(:first-child) {
   font-size: 12px;
+}
+
+/* prevention part*/
+.btn_back {
+  left: 5%;
 }

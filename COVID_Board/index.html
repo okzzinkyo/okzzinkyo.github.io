@@ -21,7 +21,6 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>COVID Board</title>
     <!-- jquery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -29,12 +28,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/index.js"></script>
+    <title>COVID Board</title>
   </head>
   <body>
     <div id="wrap">
       <header>
         <h1>코로나 현황판</h1>
-        <button id="btn_control">
+        <button id="btn_control" class="header_btn" type="button">
           <i class="fas fa-sliders-h"></i>
         </button>
       </header>
@@ -79,14 +79,20 @@
           </div>
         </section>
         <!-- Compare End -->
-        <button id="btn_prevention">예방방법 보러가기</button>
+        <button
+          id="btn_prevention"
+          type="button"
+          onclick="location.href='prevention.html'"
+        >
+          예방방법 보러가기
+        </button>
       </main>
       <aside id="control_box">
         <div class="container">
           <h2>국가 설정</h2>
           <form id="select">
             <select id="countries"></select>
-            <button id="btn_select" type="button">선택</button>
+            <button id="btn_select" type="submit">선택</button>
           </form>
         </div>
       </aside>
