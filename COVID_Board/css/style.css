@@ -1,0 +1,182 @@
+/* 일반 공통 */
+html {
+  background-color: rgb(228, 228, 228);
+}
+#wrap {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+main,
+header,
+section,
+aside,
+footer {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 320px;
+  height: 55px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 2px 0 7px #cacaca;
+  z-index: 999;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 55px;
+}
+
+#btn_control {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5%;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
+/* main 공통 */
+main {
+  padding: 55px 0;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 17.17px;
+}
+
+.bg {
+  background-color: #f6f6f6;
+  height: 150px;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.number {
+  margin-bottom: 17.17px;
+  font-size: 30px;
+  text-align: center;
+  color: #9f9f9f;
+}
+
+.New {
+  font-size: 14px;
+  text-align: right;
+}
+
+/* section - total */
+
+#confirmed.bg {
+  padding: 20px;
+}
+
+#confirmed > h3,
+#confirmed > .number {
+  margin-bottom: 11.67px;
+}
+
+#result {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* section - compare */
+#compare h2 {
+  margin-bottom: 5px;
+}
+
+#btn_prevention {
+  display: block;
+  width: 90%;
+  height: 45px;
+  margin: 0 auto;
+  background-color: #008cff;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* seclect country*/
+#control_box {
+  position: fixed;
+  top: 55px;
+  width: 320px;
+  height: 0;
+  background-color: #ffffff;
+  box-shadow: 2px 0 7px #cacaca;
+  overflow: hidden;
+  transition-duration: 1s;
+  z-index: 888;
+}
+
+aside > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#select {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#countries {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  margin-right: 15px;
+  border: 1px solid #cacaca;
+}
+
+#btn_select {
+  width: 70px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+/* footer */
+footer {
+  padding: 50px 5%;
+  font-size: 14px;
+  color: #9f9f9f;
+  background-color: rgb(61, 61, 61);
+}
+
+footer p {
+  line-height: 1.5;
+}
+
+footer p:first-child {
+  margin-bottom: 10px;
+}
+
+footer p:not(:first-child) {
+  font-size: 12px;
+}
