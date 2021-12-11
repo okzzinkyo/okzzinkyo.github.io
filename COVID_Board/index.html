@@ -28,6 +28,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/index.js"></script>
+    <script src="js/ajax.js"></script>
     <title>COVID Board</title>
   </head>
   <body>
@@ -44,19 +45,25 @@
           <div class="container">
             <div id="confirmed" class="bg">
               <h2>전세계 확진자 수</h2>
-              <p class="number" data-info="Confirmed">1,000,000 명</p>
-              <p class="New"><span class="status">▲</span>1,000</p>
+              <p class="number" data-info="Confirmed"></p>
+              <p class="New" data-info="Confirmed">
+                <span class="status"></span>
+              </p>
             </div>
             <div id="result">
               <div id="deaths" class="bg">
                 <h2>전세계 사망자 수</h2>
-                <p class="number" data-info="Deaths">1,000 명</p>
-                <p class="New"><span class="status">▲</span>1,0</p>
+                <p class="number" data-info="Deaths"></p>
+                <p class="New" data-info="Deaths">
+                  <span class="status"></span>
+                </p>
               </div>
               <div id="recovered" class="bg">
                 <h2>전세계 회복자 수</h2>
-                <p class="number" data-info="Recovered">2,000 명</p>
-                <p class="New"><span class="status">▲</span>20</p>
+                <p class="number" data-info="Recovered"></p>
+                <p class="New" data-info="Recovered">
+                  <span class="status"></span>
+                </p>
               </div>
             </div>
           </div>
@@ -91,7 +98,9 @@
         <div class="container">
           <h2>국가 설정</h2>
           <form id="select">
-            <select id="countries"></select>
+            <select id="countries">
+              <option value="">나라를 선택하세요.</option>
+            </select>
             <button id="btn_select" type="submit">선택</button>
           </form>
         </div>
