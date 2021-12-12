@@ -91,15 +91,6 @@ $(window).ready(function(){
     console.log(Selected);
   });
 
-  $.ajax({
-    "url": "https://api.covid19api.com/export",
-    "method": "GET",
-    "timeout": 0,
-  }).done(function (response) {
-
-   console.log(response);
-  });
-
   // 설정 btn click -> localStorage 데이터 저장
   $("#btn_select").click(function(){
     localStorage.setItem('country',JSON.stringify(Selected))
