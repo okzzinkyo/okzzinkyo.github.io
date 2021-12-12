@@ -59,19 +59,51 @@ $(window).ready(function(){
     } else if(NewRecovered == 0){
       Recovered_status.text('-');
     }
-  });
 
-  // 국가 설정 박스 option 목록 생성
-  $.ajax({
-    "url": "https://api.covid19api.com/countries",
-    "method": "GET",
-    "timeout": 0
-  }).done(function(response){
-    for(let i=0; i<response.length; i++){
-      var data = response[i].Country
+    // 국가 설정 박스 option 목록 생성
+    for(let i=0; i<response.Countries.length; i++){
+      var data = response.Countries[i].Country
       $("#countries").append("<option value='"+data+"'>"+data+"</option>")
     }
   });
 
- 
+  //나라 선택시 최근 4일 COVID 정보 배열에 담기
+  Selected= [];
+  $("#select").change(function(){
+    // selected value url 형식에 맞게 변환
+    var data = $("#countries option:selected").text().replace(/ /gi,"-").toLowerCase();
+
+    //API 필요 데이터 추출
+    $.ajax({
+      "url": "https://api.covid19api.com/live/country/"+data+"/status/confirmed",
+      "method": "GET",
+      "timeout": 0,
+    }).done(function (response) {
+      for(let i=0; i<4; i++){
+        var info = response[i];
+        Selected.push(info)
+      }
+
+      if(response ==null){
+        return false;
+      }
+    });
+    console.log(Selected);
+  });
+
+  $.ajax({
+    "url": "https://api.covid19api.com/export",
+    "method": "GET",
+    "timeout": 0,
+  }).done(function (response) {
+
+   console.log(response);
+  });
+
+  // 설정 btn click -> localStorage 데이터 저장
+  $("#btn_select").click(function(){
+    localStorage.setItem('country',JSON.stringify(Selected))
+  })
+
+  // 
 });
