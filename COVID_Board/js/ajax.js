@@ -79,10 +79,12 @@ $(window).ready(function(){
       "method": "GET",
       "timeout": 0,
     }).done(function (response) {
-      for(let i=0; i<4; i++){
-        var info = response[i];
+      console.log(response)
+      for(let i=1; i<5; i++){
+        var info = response[response.length-i];
         Selected.push(info)
       }
+
 
       if(response ==null){
         return false;
