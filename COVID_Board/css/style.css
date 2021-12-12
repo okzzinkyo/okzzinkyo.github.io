@@ -113,7 +113,7 @@ h2 {
 
 /* section - compare */
 #compare .bg {
-  justify-content: initial;
+  height: 190px;
 }
 
 #btn_prevention {
