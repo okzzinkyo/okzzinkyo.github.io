@@ -29,6 +29,9 @@
     ></script>
     <script src="js/index.js"></script>
     <script src="js/ajax.js"></script>
+    <script src="js/chart.js"></script>
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
     <title>COVID Board</title>
   </head>
   <body>
@@ -73,15 +76,16 @@
           <div class="container">
             <div id="confirmed_cases" class="bg">
               <h2>확진자 추이 비교</h2>
-              <p class="chart">(나라를 선택해주세요.)</p>
+              <!-- <p class="chart">(나라를 선택해주세요.)</p> -->
+              <canvas id="Chart_confirmed"></canvas>
             </div>
             <div id="deaths_cases" class="bg">
               <h2>사망자 추이</h2>
-              <p class="chart">(나라를 선택해주세요.)</p>
+              <canvas id="Chart_deaths"></canvas>
             </div>
             <div id="recovered_cases" class="bg">
               <h2>회복자 추이</h2>
-              <p class="chart">(나라를 선택해주세요.)</p>
+              <canvas id="Chart_recovered"></canvas>
             </div>
           </div>
         </section>
@@ -98,8 +102,8 @@
         <div class="container">
           <h2>국가 설정</h2>
           <form id="select">
-            <select id="countries">
-              <option value="">나라를 선택하세요.</option>
+            <select id="countries" aria-placeholder="나라를 선택하세요.">
+              <option value="none" selected disabled>나라를 선택하세요.</option>
             </select>
             <button id="btn_select" type="submit">선택</button>
           </form>
