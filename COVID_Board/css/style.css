@@ -133,7 +133,8 @@ h2 {
 #control_box {
   position: fixed;
   top: 55px;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   height: 0;
   background-color: #ffffff;
   box-shadow: 2px 0 7px #cacaca;
