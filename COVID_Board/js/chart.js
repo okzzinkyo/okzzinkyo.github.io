@@ -4,9 +4,9 @@ $(window).ready(function(){
   var selected_data = JSON.parse(localStorage.getItem("country"));
 
   var selected_1=selected_data[0]
-  var selected_2=selected_data[0]
-  var selected_3=selected_data[0]
-  var selected_4=selected_data[0]
+  var selected_2=selected_data[1]
+  var selected_3=selected_data[2]
+  var selected_4=selected_data[3]
 
   //선택한 나라의 확진자 추이
   const ctx1 = document.getElementById("Chart_confirmed").getContext("2d");
