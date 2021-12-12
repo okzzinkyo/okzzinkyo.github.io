@@ -4,9 +4,12 @@ html {
 }
 #wrap {
   position: relative;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   margin: 0 auto;
   background-color: #ffffff;
+  overflow: hidden;
+  transform: inherit;
 }
 
 main,
@@ -39,7 +42,7 @@ footer {
 header {
   position: fixed;
   top: 0;
-  width: 320px;
+  min-width: 320px;
   height: 55px;
   text-align: center;
   background-color: #ffffff;
@@ -113,7 +116,7 @@ h2 {
 
 /* section - compare */
 #compare .bg {
-  height: 190px;
+  height: auto;
 }
 
 #btn_prevention {
