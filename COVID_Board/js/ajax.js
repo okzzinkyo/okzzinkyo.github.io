@@ -6,16 +6,16 @@ $(window).ready(function(){
     "method": "GET",
     "timeout": 0
   }).done(function (response) {
-    var TotalConfirmed = response.Global.TotalConfirmed.toLocaleString('en');
+    var TotalConfirmed = response.Global.TotalConfirmed;
     var NewConfirmed = response.Global.NewConfirmed;
-    var TotalDeaths = response.Global.TotalDeaths.toLocaleString('en');
+    var TotalDeaths = response.Global.TotalDeaths;
     var NewDeaths = response.Global.NewDeaths;
-    var TotalRecovered = response.Global.TotalRecovered.toLocaleString('en');
+    var TotalRecovered = response.Global.TotalRecovered;
     var NewRecovered = response.Global.NewRecovered;
 
     // 전세계 확진자 수
     $(".number[data-info='Confirmed']").append(
-      TotalConfirmed + "명"
+      TotalConfirmed.toLocaleString('en') + "명"
     );
     $(".New[data-info='Confirmed']").append(
       NewConfirmed.toLocaleString('en')
@@ -23,7 +23,7 @@ $(window).ready(function(){
 
     // 전세계 사망자 수
     $(".number[data-info='Deaths']").append(
-      TotalDeaths + "명"
+      TotalDeaths.toLocaleString('en') + "명"
     );
     $(".New[data-info='Deaths']").append(
       NewDeaths.toLocaleString('en')
@@ -31,7 +31,7 @@ $(window).ready(function(){
 
     // 전세계 회복자 수
     $(".number[data-info='Recovered']").append(
-      TotalRecovered + "명"
+      TotalRecovered.toLocaleString('en') + "명"
     );
     $(".New[data-info='Recovered']").append(
       NewRecovered.toLocaleString('en')
@@ -75,17 +75,15 @@ $(window).ready(function(){
 
     //API 필요 데이터 추출
     $.ajax({
-      "url": "https://api.covid19api.com/live/country/"+data+"/status/confirmed",
+      "url": "https://api.covid19api.com/total/country/"+data,
       "method": "GET",
       "timeout": 0,
     }).done(function (response) {
       console.log(response)
       for(let i=1; i<5; i++){
         var info = response[response.length-i];
-        Selected.push(info)
+        Selected.push(info);
       }
-
-
       if(response ==null){
         return false;
       }

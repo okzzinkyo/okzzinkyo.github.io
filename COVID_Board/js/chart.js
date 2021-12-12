@@ -4,19 +4,35 @@ $(window).ready(function(){
   var selected_data = JSON.parse(localStorage.getItem("country"));
 
   if(selected_data == null){
-    return false};
+    return false;
+  }
 
-  var selected_1=selected_data[3]
-  var selected_2=selected_data[2]
-  var selected_3=selected_data[1]
-  var selected_4=selected_data[0]
+  var selected_1=selected_data[3];
+  var selected_2=selected_data[2];
+  var selected_3=selected_data[1];
+  var selected_4=selected_data[0];
 
+  
+  // 차트 x축 labels
+  date_arr = [];
+  for (let i=3; i>=0; i--){
+    function date_labels (x){
+      var monthNames = ["Jan", "Feb", "Mar", "Apr","May", "Jun","Jul", "Aug", "Sep", "Oct","Nov", "Dec"];
+      var date = selected_data[x].Date
+      var month = date.substring(5,7);
+      var day = date.substring(8,10);
+      return day+"-"+monthNames[parseInt(month-1)]
+    };
+    date_arr.push(date_labels(i));  
+  }
+
+  console.log(date_arr);
   //선택한 나라의 확진자 추이
   const ctx1 = document.getElementById("Chart_confirmed").getContext("2d");
   Chart_confirmed = new Chart(ctx1, {
     type: "line",
     data: {
-      labels: ["08-Dec", "09-Dec", "10-Dec", "11-Dec"],
+      labels: date_arr,
       datasets: [
         { 
           data:[50000, 40000, 250000,600000],
@@ -31,12 +47,13 @@ $(window).ready(function(){
       ],
     },
   });
+  
   //선택한 나라의 사망자 추이
   const ctx2 = document.getElementById("Chart_deaths").getContext("2d");
   Chart_deaths = new Chart(ctx2, {
     type: "line",
     data: {
-      labels: ["08-Dec", "09-Dec", "10-Dec", "11-Dec"],
+      labels: date_arr,
       datasets: [
         {
           label: "설정한 지역",
@@ -52,7 +69,7 @@ $(window).ready(function(){
   Chart_recovered = new Chart(ctx, {
     type: "line",
     data: {
-      labels: ["08-Dec", "09-Dec", "10-Dec", "11-Dec"],
+      labels: date_arr,
       datasets: [
         {
           label: "설정한 지역",
