@@ -1,26 +1,20 @@
 $(document).ready(function(){
   
 
-  $("#section01_slide > li").each(function(index){
+  $(".slide_img").each(function(index){
     $(this).attr("data-index", index);
   });
 
   var pages = $("#page_number");
-  i = 0;
-  $("#right").click(function(){  
+  var i = 0;
+  $("#right").click(function(){
     i++;
     if(i>2){
-      i=0;
+      i = 0;
     }
-    $("#section01_slide > li[data-index^='"+i+"']").css({
-      opacity:0.7
-    });
-    
-    $("#section01_slide > li[data-index!='"+i+"']").css({
-      opacity:0
-    });
-
     pages.html("0"+[i+1]);
+    $(".slide_img").removeClass("main");
+    $(".slide_img[data-index="+i+"]").addClass("main");
   });
 
   $("#left").click(function(){
@@ -28,18 +22,15 @@ $(document).ready(function(){
     if(i<0){
       i=2;
     }
-    $(".slide_img[data-index^='"+i+"']").css({
-      opacity:0.7
-    });
-    
-    $(".slide_img[data-index!='"+i+"']").css({
-      opacity:0
-    });
+    pages.html("0"+[i+1]);
+    $(".slide_img").removeClass("main");
+    $(".slide_img").eq(i).addClass("main");
+   
   });
 
   setInterval( function(){
     $("#right").trigger("click");
-  },5000)
+  },3000);
   
 
  
