@@ -67,8 +67,21 @@ $(window).ready(function(){
     }
   });
 
-  //나라 선택시 최근 4일 COVID 정보 배열에 담기
+  // 그래프 초기 값 설정 - 국가 설정 유도
   Selected= [];
+  $.ajax({
+    "url": "https://api.covid19api.com/total/country/south-africa",
+    "method": "GET",
+    "timeout": 0,
+  }).done(function (response) {
+    for(let i=1; i<5; i++){
+      var info_default = response[response.length-i];
+      Selected.push(info_default);
+    }
+    localStorage.setItem('country',JSON.stringify(Selected))
+  });
+
+  //나라 선택시 최근 4일 COVID 정보 배열에 담기
   $("#select").change(function(){
     // selected value url 형식에 맞게 변환
     var data = $("#countries option:selected").text().replace(/ /gi,"-").toLowerCase();
@@ -93,6 +106,7 @@ $(window).ready(function(){
 
   // 설정 btn click -> localStorage 데이터 저장
   $("#btn_select").click(function(){
+    localStorage.clear();
     localStorage.setItem('country',JSON.stringify(Selected))
   })
 
