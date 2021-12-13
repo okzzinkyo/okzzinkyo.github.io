@@ -3,15 +3,14 @@ $(window).ready(function(){
   //localStorage에 넣은 정보 추출
   var selected_data = JSON.parse(localStorage.getItem("country"));
 
-  if(selected_data == null){
-    return false;
-  }
-
   var selected_1=selected_data[3];
   var selected_2=selected_data[2];
   var selected_3=selected_data[1];
   var selected_4=selected_data[0];
 
+  if(selected_data == null){
+    return false;
+  }
   
   // 차트 x축 labels
   date_arr = [];
@@ -46,6 +45,17 @@ $(window).ready(function(){
         },
       ],
     },
+    options: {
+      plugins: {
+        legend: {
+          display: true,
+          position: "bottom",
+          labels:{
+            boxHeight: 1
+          },
+        }
+      }
+    }
   });
   
   //선택한 나라의 사망자 추이
@@ -62,6 +72,17 @@ $(window).ready(function(){
         },
       ],
     },
+    options: {
+      plugins: {
+        legend: {
+          display: true,
+          position: "bottom",
+          labels:{
+            boxHeight: 1,
+          },
+        }
+      }
+    }
   });
 
   //선택한 나라의 회복자 추이
@@ -78,5 +99,16 @@ $(window).ready(function(){
         },
       ],
     },
+    options: {
+      plugins: {
+        legend: {
+          display: true,
+          position: "bottom",
+          labels:{
+            boxHeight: 1
+          },
+        }
+      }
+    }
   });
 })
