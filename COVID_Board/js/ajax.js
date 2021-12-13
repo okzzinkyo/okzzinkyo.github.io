@@ -66,6 +66,28 @@ $(window).ready(function(){
       $("#countries").append("<option value='"+data+"'>"+data+"</option>")
     }
   });
+  
+  //최근 4일 전세계 COVID19 확진자수 localStroage에 저장 
+  TotalCases = [];
+  $.ajax({
+    "url": "https://corona.lmao.ninja/v2/historical/all",
+    "method": "GET",
+    "timeout": 0,
+  }).done(function (response) {
+  //확진자 데이터
+   var Case = response.cases
+  //  객체(날짜:확진자 수) 중 value(확진자 수)만
+   var CaseArr = Object.values(Case);
+  //  최근 정보 4개만 TotalCases 배열에 담기
+   for(let i=1; i<5; i++){
+     var info_total = CaseArr[CaseArr.length-i];
+     console.log(info_total)
+     TotalCases.push(info_total);
+    }
+    //배열 시간 순으로 변경
+    TotalCases.reverse();
+    localStorage.setItem('total',JSON.stringify(TotalCases));
+  });
 
   // 그래프 초기 값 설정 - 국가 설정 유도
   Selected= [];
@@ -87,7 +109,6 @@ $(window).ready(function(){
     var selected_value = $("#countries option:selected").text().replace(/ /gi,"-").toLowerCase();
 
     Selected = [];
-    $("#compare").removeClass("default")
     //API 필요 데이터 추출
     $.ajax({
       "url": "https://api.covid19api.com/total/country/"+selected_value,

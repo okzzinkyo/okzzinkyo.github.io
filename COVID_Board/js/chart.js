@@ -1,6 +1,7 @@
 $(window).ready(function(){
 
   //localStorage에 넣은 정보 추출
+  var total_data = JSON.parse(localStorage.getItem("total"));
   var selected_data = JSON.parse(localStorage.getItem("country"));
 
   var selected_1=selected_data[3];
@@ -9,6 +10,8 @@ $(window).ready(function(){
   var selected_4=selected_data[0];
 
   if(selected_data == null){
+    return false;
+  } else if (total_data == null){
     return false;
   }
   
@@ -25,7 +28,6 @@ $(window).ready(function(){
     date_arr.push(date_labels(i));  
   }
 
-  console.log(date_arr);
   //선택한 나라의 확진자 추이
   const ctx1 = document.getElementById("Chart_confirmed").getContext("2d");
   Chart_confirmed = new Chart(ctx1, {
@@ -34,8 +36,8 @@ $(window).ready(function(){
       labels: date_arr,
       datasets: [
         { 
-          data:[50000, 40000, 250000,600000],
           label: "전세계",
+          data:total_data,
           borderColor: "rgba(75, 192, 192, 1)",
         },
         {
