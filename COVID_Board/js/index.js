@@ -1,17 +1,24 @@
 $(window).ready(function(){
+
+  // 컨트롤 박스 및 배경 Show 
   function control_hide() {
     $("#control_box").css({
       height:0
     }).removeClass("show");
-  } 
+    $("#shadow").hide();
+  }
+  // 컨트롤 박스 및 배경 hide
+  function control_show() {
+    $("#control_box").css({
+      height:150
+    }).addClass("show");
+    $("#shadow").show();
+  }
 
-  $("#btn_control").click(function(){
-    // 버튼 클릭 시 컨트롤 박스 Show
+  // 컨트롤 박스 버튼 및 배경 클릭 했을때 효과
+  $("#btn_control,#shadow").click(function(){
     if($("#control_box").hasClass("show") == false){
-      $("#control_box").css({
-        height:150
-      }).addClass("show");
-  
+      control_show();
     } else if($("#control_box").hasClass("show") == true){
       control_hide();
     }
