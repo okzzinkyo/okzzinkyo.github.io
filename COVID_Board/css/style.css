@@ -1,7 +1,8 @@
 /* 일반 공통 */
 html {
-  background-color: rgb(228, 228, 228);
+  background-color: #ffffff;
 }
+
 .wrap {
   position: relative;
   width: 100%;
@@ -42,6 +43,8 @@ footer {
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100vw;
   min-width: 320px;
   height: 55px;
   text-align: center;
