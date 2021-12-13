@@ -4,17 +4,19 @@ $(window).ready(function(){
   var total_data = JSON.parse(localStorage.getItem("total"));
   var selected_data = JSON.parse(localStorage.getItem("country"));
 
+  if(selected_data == null){
+    alert("새로고침 해주세요.")
+    return false;
+  } else if (total_data == null){
+    alert("새로고침 해주세요.")
+    return false;
+  }
+
   var selected_1=selected_data[3];
   var selected_2=selected_data[2];
   var selected_3=selected_data[1];
   var selected_4=selected_data[0];
 
-  if(selected_data == null){
-    return false;
-  } else if (total_data == null){
-    return false;
-  }
-  
   // 차트 x축 labels
   date_arr = [];
   for (let i=3; i>=0; i--){
