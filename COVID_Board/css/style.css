@@ -2,7 +2,7 @@
 html {
   background-color: rgb(228, 228, 228);
 }
-#wrap {
+.wrap {
   position: relative;
   width: 100%;
   min-width: 320px;
@@ -119,6 +119,10 @@ h2 {
   height: auto;
 }
 
+#compare h2 {
+  margin-bottom: 10px;
+}
+
 #btn_prevention {
   display: block;
   width: 90%;
@@ -202,4 +206,68 @@ footer p:not(:first-child) {
 /* prevention part*/
 .btn_back {
   left: 5%;
+}
+
+#prevention_list {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#prevention_list > li {
+  width: 100%;
+  border-bottom: 1px solid #9f9f9f;
+}
+
+#prevention_list > li:first-child {
+  border-top: 1px solid #9f9f9f;
+}
+
+.list_item > h2 {
+  display: block;
+  position: relative;
+  height: 55px;
+  padding: 10px;
+  font-weight: 300;
+  line-height: 35px;
+  border-bottom: 1px solid #9f9f9f;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  transition-duration: 0.5s;
+}
+
+#washing_hand {
+  display: none;
+  width: 100%;
+  padding: 10px;
+}
+
+#rules {
+  display: none;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#rules > li {
+  list-style: square;
+  list-style-position: inside;
+  padding: 10px 0;
+}
+
+#list_contact {
+  display: block;
+  height: 150px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 300;
 }
