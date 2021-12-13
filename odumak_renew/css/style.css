@@ -84,11 +84,11 @@ header {
   top: 0;
   left: 0;
   opacity: 0;
-  transition-duration: 2s;
 }
 
-.slide_img[data-index="0"] {
+.slide_img.main {
   opacity: 0.6;
+  transition-duration: 2s;
 }
 
 #section01 > .container {

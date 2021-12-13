@@ -7,7 +7,8 @@ class ToDoTitle extends React.Component {
 }
 
 
-
+var listArr = {}
+const list = document.querySelector(".ToDoItem")
 class ToDoInput extends React.Component{
   constructor(props){
     super(props);
@@ -19,7 +20,13 @@ class ToDoInput extends React.Component{
   handleChange(event){
     this.setState({value:event.target.value});
   }
+  
   handleSubmit(event){
+    const data = {
+      value: value,
+      checked : false
+    };
+    listArr.push(data);
     localStorage.setItem(this.state.value);
     event.preventDefault();
   }
