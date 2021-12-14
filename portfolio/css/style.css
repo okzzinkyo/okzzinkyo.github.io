@@ -47,8 +47,11 @@ section {
 /* section02 */
 
 #page02 {
-  padding: 80px 80px 100px 100px;
   box-sizing: border-box;
+}
+
+#resume {
+  width: 100%;
 }
 
 /* section03 */
@@ -76,7 +79,7 @@ section {
 }
 
 #list_img {
-  width: 70%;
+  width: 90%;
 }
 
 /* 포트폴리오 공통 */
