@@ -3,10 +3,6 @@ html {
   background-color: #ffffff;
 }
 
-body {
-  overflow: hidden;
-}
-
 .wrap {
   position: relative;
   width: 100%;
@@ -48,6 +44,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
   min-width: 320px;
   height: 55px;
   text-align: center;
