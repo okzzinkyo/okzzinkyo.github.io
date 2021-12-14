@@ -219,6 +219,12 @@ footer p:not(:first-child) {
 }
 
 /* prevention part*/
+#prevention.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .btn_back {
   left: 5%;
 }
