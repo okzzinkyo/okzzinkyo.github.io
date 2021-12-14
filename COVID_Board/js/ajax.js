@@ -62,7 +62,7 @@
     // 국가 설정 박스 option 목록 생성
     for(var i=0; i<response.Countries.length; i++){
       var data = response.Countries[i].Country
-      console.log(data)
+      // console.log(data)
       if(data != "Saint Vincent and Grenadines"){
         $("#countries").append("<option value='"+data+"'>"+data+"</option>")        
       }
