@@ -62,8 +62,12 @@
     // 국가 설정 박스 option 목록 생성
     for(var i=0; i<response.Countries.length; i++){
       var data = response.Countries[i].Country
-      $("#countries").append("<option value='"+data+"'>"+data+"</option>")
+      console.log(data)
+      if(data != "Saint Vincent and Grenadines"){
+        $("#countries").append("<option value='"+data+"'>"+data+"</option>")        
+      }
     }
+
   });
   
   // 차트 datasets - 전세계 확진자
@@ -123,6 +127,8 @@
       "method": "GET",
       "timeout": 0,
     }).done(function (response) {
+      
+    console.log(response);
       //최근 정보 4개만 chart_data1_1,2,3에 담기
       for(var i=4; i>=1; i--){
         // 설정된 국가의 확진자 데이터
@@ -158,9 +164,16 @@
 
       // input 값 변경 시 선택값 출력
       $("#select").change(function(){
+        selected_value = $("#countries option:selected").text()
+        console.log(selected_value)
         // selected value url 형식에 맞게 변환
-        selected_value = $("#countries option:selected").text().replace(/ /gi,"-").toLowerCase();
-      })
+        if(selected_value == 'United States of America'){
+          selected_value = "United States"
+        } else if(selected_value == "Côte d'Ivoire"){
+          selected_value = "Cote-dIvoire"
+        }
+        selected_value.replace(/[()']/gi,"").replace(/\,.*/,"").replace("Republic-of-",'').replace(/ /gi,"-").toLowerCase();
+      });
 
       // 선택 버튼 클릭시 sessionStorage에 저장
       $("#btn_select").click(function(){
