@@ -1,6 +1,7 @@
 /* 일반 공통 */
 html {
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 .wrap {
