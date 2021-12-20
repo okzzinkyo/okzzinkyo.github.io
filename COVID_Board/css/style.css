@@ -180,13 +180,6 @@ aside > .container {
   border-radius: 5px;
 }
 
-#btn_select {
-  width: 70px;
-  height: 100%;
-  flex-shrink: 0;
-  border-radius: 5px;
-}
-
 #shadow {
   display: none;
   position: fixed;
