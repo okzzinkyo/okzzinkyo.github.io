@@ -1,5 +1,3 @@
-$(window).ready(function(){
-
   // 컨트롤 박스 및 배경 Show 
   function control_hide() {
     $("#control_box").css({
@@ -14,8 +12,11 @@ $(window).ready(function(){
     }).addClass("show");
     $("#shadow").show();
   }
+  
+$(document).ready(function(){
 
   // 컨트롤 박스 버튼 및 배경 클릭 했을때 효과
+  // 이렇게 생긴 click 펑션같이 $('selector').함수 형태는 해당 selector가 생긴 후에 정의해야해서 document.ready로 꼭 들어가야함 -> document.ready는 html element랑 script 다 불러온 후에 해당 부분을 실행하겠다
   $("#btn_control,#shadow").click(function(){
     if($("#control_box").hasClass("show") == false){
       control_show();
