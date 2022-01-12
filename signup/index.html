@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 id="title">Sign Up</h1>
+    <div id="container">
+      <form id="signin" action="" method="post">
+        <!-- 이름  input -->
+        <label for="name">이름</label>
+        <input id="name" type="text" autofocus placeholder="이름을 입력해주세요." />
+        <p id="name_error"></p>
+        <!--  휴대폰 번호  input -->
+        <label for="phone">휴대폰 번호</label>
+        <input id="phone" type="tel" placeholder="연락처 번호를 입력해주세요." />
+        <p id="phone_error"></p>
+        <!--  이메일 input  -->
+        <label for="email">이메일</label>
+        <div id="input_email">
+          <input id="email_ID" type="email" placeholder="이메일 아이디" /><span>&#64;</span>
+          <input id="email_Server" type="email" placeholder="이메일 서버" disabled />
+          <p id="email_error"></p>
+        </div>
+        <!-- 주민등록번호  input -->
+        <label for="SSN_front">주민등록번호</label>
+        <div id="input_SSN">
+          <input id="SSN_front" type="text" name="SSN" placeholder="앞자리 6개" />
+          <span>&#45;</span>
+          <input id="SSN_back" type="text" name="SSN" disabled placeholder="뒷자리 6개" />
+          <p id="SSN_error"></p>
+        </div>
+        <!-- 보유자산  input -->
+        <label for="asset">보유자산</label>
+        <input id="asset" type="text" placeholder="보유자산을 입력해주세요" />
+        <p id="name_error"></p>
+        <!--  -->
+        <button id="btn_join" type="submit" disabled>Login</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+
+</html>
