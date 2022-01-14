@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Sign up</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -26,30 +26,30 @@
 
         <!--  휴대폰 번호  input -->
         <label for="phone">휴대폰 번호</label>
-        <input id="phone" type="tel" placeholder="연락처 번호를 입력해주세요." maxlength="13" />
+        <input id="phone" type="text" placeholder="연락처 번호를 입력해주세요." maxlength="13" InputScope="Number" />
         <p id="phone_error" class="error_msg"></p>
 
         <!--  이메일 input  -->
-        <label for="email_ID">이메일</label>
+        <label for="email">이메일</label>
         <div id="input_email">
-          <input id="email_ID" type="text" placeholder="이메일 아이디" minlength="8" maxlength="12" /><span
-            class="email_ID">&#64;</span>
-          <input id="email_Domain" type="text" placeholder="이메일 도메인" />
-          <p id="email_error" class="error_msg"></p>
+          <input id="email" type="text" placeholder="이메일 아이디" minlength="8" maxlength="12" /><span class="email"
+            InputScope="default">&#64;</span>
+          <input id="email_Domain" type="text" placeholder="이메일 도메인" InputScope="EmailSmtpAddress" />
         </div>
+        <p id="email_error" class="error_msg"></p>
 
         <!-- 주민등록번호  input -->
-        <label for="SSN_front">주민등록번호</label>
+        <label for="SSN">주민등록번호</label>
         <div id="input_SSN">
-          <input id="SSN_front" type="text" name="SSN" placeholder="앞 6자리" maxlength="6" />
-          <span class="SSN_front">&#45;</span>
+          <input id="SSN" type="text" name="SSN" placeholder="앞 6자리" maxlength="6" />
+          <span class="SSN">&#45;</span>
           <input id="SSN_back" type="password" name="SSN" disabled placeholder="뒤 7자리" maxlength="7" />
-          <p id="SSN_error" class="error_msg"></p>
         </div>
+        <p id="SSN_error" class="error_msg"></p>
 
         <!-- 보유자산  input -->
         <label for="asset">보유자산</label>
-        <input id="asset" type="text" placeholder="보유자산을 입력해주세요" maxlength="21" />
+        <input id="asset" type="text" placeholder="보유자산을 입력해주세요" maxlength="21" InputScope="Number" />
         <p class="asset"><span id="korean_num">금</span><span id="won"></span><span>원</span></p>
         <p id="name_error" class="error_msg"></p>
         <!--  -->
@@ -59,6 +59,12 @@
     </div>
 
   </div>
+  <script type="text/javascript">
+    // prevent zoom
+    document.addEventListener('touchmove', function (event) {
+      if (event.scale !== 1) { event.preventDefault(); }
+    }, { passive: false });
+  </script>
 </body>
 
 </html>

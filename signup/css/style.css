@@ -11,6 +11,10 @@
   height: 100vh;
 }
 
+body {
+  touch-action: pan-y;
+}
+
 #title {
   width: 100%;
   height: 70px;
@@ -51,7 +55,7 @@ label:first-child {
 }
 
 input {
-  /* width: 100%; */
+  width: 100%;
   height: 48px;
   padding-left: 15px;
   font-size: 12px;
@@ -72,7 +76,12 @@ label:not([for="name"]) {
   display: none;
 }
 
-span {
+span.SSN,
+span.email {
+  display: none;
+}
+
+p.asset {
   display: none;
 }
 
@@ -98,30 +107,42 @@ label.error {
   margin-bottom: 50px;
 } */
 
-input[name="SSN"] {
+/* input[name="SSN"] {
   width: 48%;
-}
+} */
 
-#email_ID,
-#SSN_front {
-  width: 45%;
-}
-
-#email_Domain,
+/* #email_Domain,
 #SSN_back {
   width: 47.5%;
-}
+} */
 
 span {
   color: #517e73;
 }
 
-#input_email > span {
-  padding-left: 5px;
+#input_email,
+#input_SSN {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#input_SSN > span {
-  padding: 0 5px;
+#SSN_back {
+  font-family: "password";
+}
+
+/* #input_email > span {
+  padding-left: 5px;
+} */
+
+#input_SSN > span,
+#input_email > span {
+  padding: 0 9px;
+}
+
+#input_email > span {
+  padding: 0 3px;
 }
 
 .asset {
@@ -155,4 +176,9 @@ span {
 #btn_join:disabled {
   background-color: rgb(233, 233, 233);
   color: #517e73;
+}
+
+:root {
+  touch-action: pan-x pan-y;
+  height: 100%;
 }
